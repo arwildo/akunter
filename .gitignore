@@ -11,6 +11,9 @@
 /dist
 /build
 
+# DB driver
+/backend/database.js
+
 # misc
 .DS_Store
 .env.local
