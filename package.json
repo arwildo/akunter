@@ -4,9 +4,9 @@
   "description": "Full-stack MERN (MongoDB, Express, React, Node) application to handle the store's accounting and database",
   "main": "index.js",
   "scripts": {
-    "start": "webpack serve --mode development",
+    "start": "node backend/server.js",
     "build": "webpack --mode production",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install npm && run build"
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install && npm run build"
   },
   "repository": {
     "type": "git",
@@ -55,7 +55,7 @@
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
   },
-  "proxy": "http://localhost:8080",
+  "proxy": "http://localhost:5000",
   "engines": {
       "node": "12.19.0",
       "npm": "6.14.9"
