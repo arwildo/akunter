@@ -11,10 +11,11 @@
 /dist
 /build
 
-# DB driver
-/backend/database.js
+# env
+/env
 
 # misc
+*db.sqlite*
 .DS_Store
 .env.local
 .env.development.local
