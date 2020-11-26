@@ -16,7 +16,7 @@
 
 # env
 /env
-backend/backend/envar.py
+backend/backend/local_settings.py
 
 # misc
 *db.sqlite*
