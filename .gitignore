@@ -13,6 +13,7 @@
 
 # env
 /env
+backend/backend/envar.py
 
 # misc
 *db.sqlite*
