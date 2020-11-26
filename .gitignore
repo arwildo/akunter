@@ -3,6 +3,9 @@
 /.pnp
 .pnp.js
 
+# Byte-compiled
+*__pycache__*
+
 # testing
 /coverage
 
