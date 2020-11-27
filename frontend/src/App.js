@@ -1,151 +1,40 @@
-import React, { Component } from "react";
-import Modal from "./components/Modal";
-import axios from "axios";
+import React, { useEffect } from 'react';
+import { Switch, Route, useLocation } from 'react-router-dom';
+import AOS from 'aos';
+import { focusHandling } from 'cruip-js-toolkit';
+import './css/style.scss';
 
-class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      viewCompleted: false,
-      activeItem: {
-        title: "",
-        description: "",
-        completed: false
-      },
-      akunterList: []
-    };
-  }
+import Home from './pages/Home';
 
-  componentDidMount() {
-    this.refreshList();
-  }
+function App() {
 
-  refreshList = () => {
-    axios
-      .get("http://localhost:8000/api/akunters/")
-      .then(res => this.setState({ akunterList: res.data }))
-      .catch(err => console.log(err));
-  };
+  const location = useLocation();
 
-  displayCompleted = status => {
-    if (status) {
-      return this.setState({ viewCompleted: true });
-    }
-    return this.setState({ viewCompleted: false });
-  };
+  useEffect(() => {
+    AOS.init({
+      once: true,
+      disable: 'phone',
+      duration: 700,
+      easing: 'ease-out-cubic',
+    });
+  });
 
-  renderTabList = () => {
-    return (
-      <div className="my-5 tab-list">
-        <span
-          onClick={() => this.displayCompleted(true)}
-          className={this.state.viewCompleted ? "active" : ""}
-        >
-          complete
-        </span>
-        <span
-          onClick={() => this.displayCompleted(false)}
-          className={this.state.viewCompleted ? "" : "active"}
-        >
-          Incomplete
-        </span>
-      </div>
-    );
-  };
+  useEffect(() => {
+    document.querySelector('html').style.scrollBehavior = 'auto'
+    window.scroll({ top: 0 })
+    document.querySelector('html').style.scrollBehavior = ''
+    focusHandling('outline');
+  }, [location.pathname]); // triggered on route change
 
-  renderItems = () => {
-    const { viewCompleted } = this.state;
-    const newItems = this.state.akunterList.filter(
-      item => item.completed === viewCompleted
-    );
-    return newItems.map(item => (
-      <li
-        key={item.id}
-        className="list-group-item d-flex justify-content-between align-items-center"
-      >
-        <span
-          className={`akunter-title mr-2 ${
-            this.state.viewCompleted ? "completed-akunter" : ""
-          }`}
-          title={item.description}
-        >
-          {item.title}
-        </span>
-        <span>
-          <button
-            onClick={() => this.editItem(item)}
-            className="btn btn-secondary mr-2"
-          >
-            {" "}
-            Edit{" "}
-          </button>
-          <button
-            onClick={() => this.handleDelete(item)}
-            className="btn btn-danger"
-          >
-            Delete{" "}
-          </button>
-        </span>
-      </li>
-    ));
-  };
-
-  toggle = () => {
-    this.setState({ modal: !this.state.modal });
-  };
-  handleSubmit = item => {
-    this.toggle();
-    if (item.id) {
-      axios
-        .put(`http://localhost:8000/api/akunters/${item.id}/`, item)
-        .then(res => this.refreshList());
-      return;
-    }
-    axios
-      .post("http://localhost:8000/api/akunters/", item)
-      .then(res => this.refreshList());
-  };
-
-  handleDelete = item => {
-    axios
-      .delete(`http://localhost:8000/api/akunters/${item.id}`)
-      .then(res => this.refreshList());
-  };
-  createItem = () => {
-    const item = { title: "", description: "", completed: false };
-    this.setState({ activeItem: item, modal: !this.state.modal });
-  };
-  editItem = item => {
-    this.setState({ activeItem: item, modal: !this.state.modal });
-  };
-  render() {
-    return (
-      <main className="content">
-        <h1 className="text-white text-uppercase text-center my-4">akunter app</h1>
-        <div className="row ">
-          <div className="col-md-6 col-sm-10 mx-auto p-0">
-            <div className="card p-3">
-              <div className="">
-                <button onClick={this.createItem} className="btn btn-primary">
-                  Add task
-                </button>
-              </div>
-              {this.renderTabList()}
-              <ul className="list-group list-group-flush">
-                {this.renderItems()}
-              </ul>
-            </div>
-          </div>
-        </div>
-        {this.state.modal ? (
-          <Modal
-            activeItem={this.state.activeItem}
-            toggle={this.toggle}
-            onSave={this.handleSubmit}
-          />
-        ) : null}
-      </main>
-    );
-  }
+  return (
+    <>
+      <Switch>
+        <Route exact path="/">
+          <Home />
+        </Route>
+      </Switch>
+    </>
+  );
 }
+
 export default App;

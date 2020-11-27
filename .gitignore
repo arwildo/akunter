@@ -4,7 +4,7 @@
 .pnp.js
 
 # Byte-compiled
-*__pycache__*
+*__pycache__
 
 # testing
 /coverage
@@ -13,13 +13,15 @@
 /public
 /dist
 /build
+frontend/public
+frontend/dist
+frontend/build
 
 # env
 /env
 backend/backend/local_settings.py
 
 # misc
-*db.sqlite*
 .DS_Store
 .env.local
 .env.development.local
