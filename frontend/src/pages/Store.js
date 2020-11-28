@@ -1,7 +1,6 @@
 import React from 'react';
 
 import Header from '../partials/Header';
-import Cashier from '../partials/Cashier';
 
 function Home() {
   return (
@@ -14,7 +13,7 @@ function Home() {
       <main className="flex-grow">
 
         {/*  Page sections */}
-        <Cashier />
+        <h1>Store</h1>
 
       </main>
 
