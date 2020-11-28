@@ -8,8 +8,22 @@ function ActionBlocks() {
     const date = new Date();
     return days[date.getDay()] + " " + date.getDate() + " " + months[date.getMonth()];
   }
+
+  const divImg1 = {
+    backgroundImage: "url(" + require("../images/cashier.jpg") + ")",
+    backgroundSize: "cover",
+  }
+  const divImg2 = {
+    backgroundImage: "url(" + require("../images/sales.jpg") + ")",
+    backgroundSize: "cover",
+  }
+  const divImg3 = {
+    backgroundImage: "url(" + require("../images/store.jpg") + ")",
+    backgroundSize: "cover",
+  }
+
   return (
-    <section className="relative">
+    <section className="relative text-gray-700">
 
       {/* Section background (needs .relative class on parent and next sibling elements) */}
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6">
@@ -18,26 +32,46 @@ function ActionBlocks() {
           {/* Section header */}
           <div className="mb-3">
               <h1 className="text-3xl font-bold">Today</h1>
-              <p className="text-sm text-gray-500 uppercase font-bold">{getDate()}</p>
+              <p className="text-sm text-gray-400 uppercase font-bold">{getDate()}</p>
           </div>
 
           {/* Items */}
           <div className="max-w-sm mx-auto mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3 items-start md:max-w-2xl lg:max-w-none">
 
             {/* 1st item */}
-            <div className="relative flex flex-col items-center p-6 bg-white rounded shadow-xl">
-              <svg className="w-16 h-16 p-1 -mt-1 mb-2" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-                <g fill="none" fillRule="evenodd">
-                  <rect className="fill-current text-blue-600" width="64" height="64" rx="32" />
-                  <g strokeWidth="2">
-                    <path className="stroke-current text-blue-300" d="M34.514 35.429l2.057 2.285h8M20.571 26.286h5.715l2.057 2.285" />
-                    <path className="stroke-current text-white" d="M20.571 37.714h5.715L36.57 26.286h8" />
-                    <path className="stroke-current text-blue-300" strokeLinecap="square" d="M41.143 34.286l3.428 3.428-3.428 3.429" />
-                    <path className="stroke-current text-white" strokeLinecap="square" d="M41.143 29.714l3.428-3.428-3.428-3.429" />
-                  </g>
-                </g>
-              </svg>
-              <h4 className="text-xl font-bold leading-snug tracking-tight mb-1">Buy</h4>
+            <div className="mb-5">
+                <a href="/" className="block rounded-lg relative p-5 transform transition-all duration-300 scale-100 hover:scale-95" style={divImg1}>
+                    <div className="absolute top-0 right-0 -mt-3 mr-3">
+                        <div className="rounded-full bg-blue-500 text-white text-xs py-1 pl-2 pr-3 leading-none"><i className="mdi mdi-cash-register text-base align-middle"></i> <span className="align-middle">Buy</span></div>
+                    </div>
+                    <div className="h-48"></div>
+                    <h2 className="text-white text-2xl font-bold leading-tight mb-3 pr-5">Payment Machine</h2>
+                </a>
+            </div>
+
+
+
+            
+            {/* 2nd item */}
+            <div className="mb-5">
+                <a href="/" className="block rounded-lg relative p-5 transform transition-all duration-300 scale-100 hover:scale-95" style={divImg2}>
+                    <div className="absolute top-0 right-0 -mt-3 mr-3">
+                        <div className="rounded-full bg-green-500 text-white text-xs py-1 pl-2 pr-3 leading-none"><i className="mdi mdi-chart-box-outline text-base align-middle"></i> <span className="align-middle">Sales</span></div>
+                    </div>
+                    <div className="h-48"></div>
+                    <h2 className="text-white text-2xl font-bold leading-tight mb-3 pr-5">Sales List</h2>
+                </a>
+            </div>
+
+            {/* 3th item */}
+            <div className="mb-5">
+                <a href="/" className="block rounded-lg relative p-5 transform transition-all duration-300 scale-100 hover:scale-95" style={divImg3}>
+                    <div className="absolute top-0 right-0 -mt-3 mr-3">
+                        <div className="rounded-full bg-yellow-500 text-white text-xs py-1 pl-2 pr-3 leading-none"><i className="mdi mdi-store text-base align-middle"></i> <span className="align-middle">Sales</span></div>
+                    </div>
+                    <div className="h-48"></div>
+                    <h2 className="text-white text-2xl font-bold leading-tight mb-3 pr-5">Store Settings</h2>
+                </a>
             </div>
 
           </div>

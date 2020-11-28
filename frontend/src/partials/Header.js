@@ -13,9 +13,16 @@ function Header() {
         </div>
       </a>
       <a href="/" className="flex flex-grow items-center justify-center p-2 text-gray-500 hover:text-blue-500">
+        <div className="text-center"> <span className="block h-8 text-3xl leading-8">
+            <i className="mdi mdi-cash-register"></i>
+          </span>
+          <span className="block text-xs leading-none">Buy</span>
+        </div>
+      </a>
+      <a href="/" className="flex flex-grow items-center justify-center p-2 text-gray-500 hover:text-blue-500">
         <div className="text-center">
           <span className="block h-8 text-3xl leading-8">
-            <i className="mdi mdi-table"></i>
+            <i className="mdi mdi-chart-box-outline"></i>
           </span>
           <span className="block text-xs leading-none">Sales</span>
         </div>
@@ -23,17 +30,9 @@ function Header() {
       <a href="/" className="flex flex-grow items-center justify-center p-2 text-gray-500 hover:text-blue-500">
         <div className="text-center">
           <span className="block h-8 text-3xl leading-8">
-            <i className="mdi mdi-poll"></i>
+            <i className="mdi mdi-store"></i>
           </span>
-          <span className="block text-xs leading-none">Charts</span>
-        </div>
-      </a>
-      <a href="/" className="flex flex-grow items-center justify-center p-2 text-gray-500 hover:text-blue-500">
-        <div className="text-center">
-          <span className="block h-8 text-3xl leading-8">
-            <i className="mdi mdi-account"></i>
-          </span>
-          <span className="block text-xs leading-none">Account</span>
+          <span className="block text-xs leading-none">Store</span>
         </div>
       </a>
     </div>
