@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function ActionBlocks() {
   function getDate() {
@@ -40,13 +41,13 @@ function ActionBlocks() {
 
             {/* 1st item */}
             <div className="mb-5">
-                <a href="/" className="block rounded-lg relative p-5 transform transition-all duration-300 scale-100 hover:scale-95" style={divImg1}>
+                <Link to="/buy" className="block rounded-lg relative p-5 transform transition-all duration-300 scale-100 hover:scale-95" style={divImg1}>
                     <div className="absolute top-0 right-0 -mt-3 mr-3">
                         <div className="rounded-full bg-blue-500 text-white text-xs py-1 pl-2 pr-3 leading-none"><i className="mdi mdi-cash-register text-base align-middle"></i> <span className="align-middle">Buy</span></div>
                     </div>
                     <div className="h-48"></div>
                     <h2 className="text-white text-2xl font-bold leading-tight mb-3 pr-5">Payment Machine</h2>
-                </a>
+                </Link>
             </div>
 
 
@@ -54,24 +55,24 @@ function ActionBlocks() {
             
             {/* 2nd item */}
             <div className="mb-5">
-                <a href="/" className="block rounded-lg relative p-5 transform transition-all duration-300 scale-100 hover:scale-95" style={divImg2}>
+                <Link to="/sales" className="block rounded-lg relative p-5 transform transition-all duration-300 scale-100 hover:scale-95" style={divImg2}>
                     <div className="absolute top-0 right-0 -mt-3 mr-3">
                         <div className="rounded-full bg-green-500 text-white text-xs py-1 pl-2 pr-3 leading-none"><i className="mdi mdi-chart-box-outline text-base align-middle"></i> <span className="align-middle">Sales</span></div>
                     </div>
                     <div className="h-48"></div>
                     <h2 className="text-white text-2xl font-bold leading-tight mb-3 pr-5">Sales List</h2>
-                </a>
+                </Link>
             </div>
 
             {/* 3th item */}
             <div className="mb-5">
-                <a href="/" className="block rounded-lg relative p-5 transform transition-all duration-300 scale-100 hover:scale-95" style={divImg3}>
+                <Link to="/store" className="block rounded-lg relative p-5 transform transition-all duration-300 scale-100 hover:scale-95" style={divImg3}>
                     <div className="absolute top-0 right-0 -mt-3 mr-3">
                         <div className="rounded-full bg-yellow-500 text-white text-xs py-1 pl-2 pr-3 leading-none"><i className="mdi mdi-store text-base align-middle"></i> <span className="align-middle">Sales</span></div>
                     </div>
                     <div className="h-48"></div>
                     <h2 className="text-white text-2xl font-bold leading-tight mb-3 pr-5">Store Settings</h2>
-                </a>
+                </Link>
             </div>
 
           </div>

@@ -5,6 +5,9 @@ import { focusHandling } from 'cruip-js-toolkit';
 import './css/style.scss';
 
 import Home from './pages/Home';
+import Buy from './pages/Buy';
+import Sales from './pages/Sales';
+import Store from './pages/Store';
 
 function App() {
 
@@ -31,6 +34,15 @@ function App() {
       <Switch>
         <Route exact path="/">
           <Home />
+        </Route>
+        <Route path="/buy">
+          <Buy />
+        </Route>
+        <Route path="/sales">
+          <Sales />
+        </Route>
+        <Route path="/store">
+          <Store />
         </Route>
       </Switch>
     </>
