@@ -86,14 +86,17 @@ function Home() {
         <div className="relative text-gray-500 px-2 md:px-6 pb-6 mt-6">
           
             <div className="flex">
-            {/*
                 <div className="p-2 w-12">
                   <img src="https://dummyimage.com/50x50/bababa/0011ff&amp;text=50x50" alt="img product" />
                 </div>
-            */}
-                <div className="flex-auto text-md">
-                    <div className="font-bold">Beef Original</div>
-                    <div className="text-gray-500">Qt: 2</div>
+                <div className="flex-auto flex text-md">
+                    <div className="font-bold w-1/2">
+                      Beef Original
+                    </div>
+                    <p> x </p>
+                    <div className="w-1/2">
+                      <input className="ml-8" type="number" min="10" max="100" />
+                    </div>
                 </div>
                 <div className="flex flex-col w-18 font-medium items-end">
                     <div className="w-4 h-4 mb-6 hover:bg-red-200 rounded-full cursor-pointer text-red-700">
@@ -104,7 +107,8 @@ function Home() {
                             <line x1="14" y1="11" x2="14" y2="17"></line>
                         </svg>
                     </div>
-                    $12.22</div>
+                    $12.22
+                </div>
             </div>
 
             <div className="mb-12 justify-center flex">
