@@ -89,14 +89,38 @@ function Home() {
                 <div className="p-2 w-12">
                   <img src="https://dummyimage.com/50x50/bababa/0011ff&amp;text=50x50" alt="img product" />
                 </div>
-                <div className="flex-auto flex text-md">
-                    <div className="font-bold w-1/2">
+                <div className="flex-auto text-md">
+                    <div className="font-bold">
                       Beef Original
                     </div>
-                    <p> x </p>
-                    <div className="w-1/2">
-                      <input className="ml-8" type="number" min="10" max="100" />
-                    </div>
+                    <div
+                        className="flex flex-row border h-10 w-24 rounded-xl relative"
+                      >
+                        <button
+                          className="font-semibold bg-gray-400 lg:hover:bg-red-400 activate:bg-red-400 text-white border-gray-400 h-full w-20 flex rounded-l focus:outline-none cursor-pointer"
+                        >
+                          <span className="m-auto">-</span>
+                        </button>
+                        <input
+                          type="hidden"
+                          className="md:p-2 p-1 text-xs md:text-base border-gray-400 focus:outline-none text-center"
+                          readOnly
+                          name="custom-input-number"
+                        />
+                        <div
+                          className="bg-white w-24 text-xs md:text-base flex items-center justify-center cursor-default"
+                        >
+                          <span>2</span>
+                        </div>
+
+                        <button
+                          className="font-semibold bg-gray-400 lg:hover:bg-blue-400 activate:bg-blue-400 text-white border-gray-400 h-full w-20 flex rounded-r focus:outline-none cursor-pointer"
+                        >
+                          <span className="m-auto">+</span>
+                        </button>
+                      </div>
+
+
                 </div>
                 <div className="flex flex-col w-18 font-medium items-end">
                     <div className="w-4 h-4 mb-6 hover:bg-red-200 rounded-full cursor-pointer text-red-700">
