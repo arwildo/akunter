@@ -1,8 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import Header from '../partials/Header';
 
-function Home() {
+function Buy() {
+  const [count, setCount] = useState(1);
+
+  const decrementCount = () => {
+    if (count > 0) setCount(count - 1);
+  };
+
+  const incrementCount = () => {
+    setCount(count + 1);
+  };
+
   return (
     <div className="flex flex-col min-h-screen overflow-hidden">
 
@@ -86,40 +96,38 @@ function Home() {
         <div className="relative text-gray-500 px-2 md:px-6 pb-6 mt-6">
           
             <div className="flex">
+
                 <div className="p-2 w-12">
                   <img src="https://dummyimage.com/50x50/bababa/0011ff&amp;text=50x50" alt="img product" />
                 </div>
+
                 <div className="flex-auto text-md">
                     <div className="font-bold">
                       Beef Original
                     </div>
-                    <div
-                        className="flex flex-row border h-10 w-24 rounded-xl relative"
-                      >
+                    <div className="flex flex-row border h-8 w-24 rounded-xl relative">
                         <button
                           className="font-semibold bg-gray-400 lg:hover:bg-red-400 activate:bg-red-400 text-white border-gray-400 h-full w-20 flex rounded-l focus:outline-none cursor-pointer"
+                          onClick={decrementCount}
                         >
                           <span className="m-auto">-</span>
                         </button>
+
                         <input
-                          type="hidden"
-                          className="md:p-2 p-1 text-xs md:text-base border-gray-400 focus:outline-none text-center"
+                          className="border-gray-400 text-center bg-white w-10 text-xs md:text-base flex items-center justify-center cursor-default"
                           readOnly
                           name="custom-input-number"
+                          value={count}
                         />
-                        <div
-                          className="bg-white w-24 text-xs md:text-base flex items-center justify-center cursor-default"
-                        >
-                          <span>2</span>
-                        </div>
 
                         <button
                           className="font-semibold bg-gray-400 lg:hover:bg-blue-400 activate:bg-blue-400 text-white border-gray-400 h-full w-20 flex rounded-r focus:outline-none cursor-pointer"
+                          onClick={incrementCount}
                         >
                           <span className="m-auto">+</span>
                         </button>
-                      </div>
 
+                    </div>
 
                 </div>
                 <div className="flex flex-col w-18 font-medium items-end">
@@ -148,4 +156,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Buy;
