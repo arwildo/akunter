@@ -27,18 +27,34 @@ function Header() {
       </Link> 
     }
 
-    {location === "/buy" ?
-      <Link to="/buy" className="flex flex-grow items-center justify-center p-2 text-blue-500 hover:text-blue-500">
+    {location === "/order" ?
+      <Link to="/order" className="flex flex-grow items-center justify-center p-2 text-blue-500 hover:text-blue-500">
         <div className="text-center"> <span className="block h-8 text-3xl leading-8">
             <i className="mdi mdi-cash-register"></i>
           </span>
-          <span className="block text-xs leading-none">Buy</span>
+          <span className="block text-xs leading-none">Order</span>
         </div>
-      </Link> : <Link to="/buy" className="flex flex-grow items-center justify-center p-2 text-gray-500 hover:text-blue-500">
+      </Link> : <Link to="/order" className="flex flex-grow items-center justify-center p-2 text-gray-500 hover:text-blue-500">
         <div className="text-center"> <span className="block h-8 text-3xl leading-8">
             <i className="mdi mdi-cash-register"></i>
           </span>
-          <span className="block text-xs leading-none">Buy</span>
+          <span className="block text-xs leading-none">Order</span>
+        </div>
+      </Link>
+    }
+
+    {location === "/pay" ?
+      <Link to="/pay" className="flex flex-grow items-center justify-center p-2 text-blue-500 hover:text-blue-500">
+        <div className="text-center"> <span className="block h-8 text-3xl leading-8">
+            <i className="mdi mdi-cart-plus"></i>
+          </span>
+          <span className="block text-xs leading-none">Pay</span>
+        </div>
+      </Link> : <Link to="/pay" className="flex flex-grow items-center justify-center p-2 text-gray-500 hover:text-blue-500">
+        <div className="text-center"> <span className="block h-8 text-3xl leading-8">
+            <i className="mdi mdi-cart-plus"></i>
+          </span>
+          <span className="block text-xs leading-none">Pay</span>
         </div>
       </Link>
     }

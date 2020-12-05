@@ -41,17 +41,14 @@ function ActionBlocks() {
 
             {/* 1st item */}
             <div className="mb-5">
-                <Link to="/buy" className="block rounded-lg relative p-5 transform transition-all duration-300 scale-100 hover:scale-95" style={divImg1}>
+                <Link to="/order" className="block rounded-lg relative p-5 transform transition-all duration-300 scale-100 hover:scale-95" style={divImg1}>
                     <div className="absolute top-0 right-0 -mt-3 mr-3">
                         <div className="rounded-full bg-blue-500 text-white text-xs py-1 pl-2 pr-3 leading-none"><i className="mdi mdi-cash-register text-base align-middle"></i> <span className="align-middle">Buy</span></div>
                     </div>
                     <div className="h-48"></div>
-                    <h2 className="text-white text-2xl font-bold leading-tight mb-3 pr-5">Payment Machine</h2>
+                    <h2 className="text-white text-2xl font-bold leading-tight mb-3 pr-5">Order</h2>
                 </Link>
             </div>
-
-
-
             
             {/* 2nd item */}
             <div className="mb-5">

@@ -1,7 +1,13 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { addToCart } from '../actions/cartActions';
 
 class Buy extends Component {
+
+  handleClick = (id)=>{
+    this.props.addToCart(id); 
+    alert(0)
+  }
 
   render() {
 
@@ -10,7 +16,7 @@ class Buy extends Component {
       return(
         <div className={item.style} key={item.id}>
           <div className="relative text-white px-4 pb-4 mt-4">
-            <img src={item.img} />
+            <img src={item.img} alt={item.title + " " + item.desc}/>
             <span className="block opacity-75 -mb-1">{item.title}</span>
             <div className="md:flex justify-between">
               <span className="block font-semibold text-md md:text-xl">{item.desc}</span>
@@ -34,9 +40,15 @@ class Buy extends Component {
 }
 
 const mapStateToProps = (state)=>{
-    return {
-      items: state.items
-    }
+  return {
+    items: state.items
   }
+}
 
-export default connect(mapStateToProps)(Buy)
+const mapDispatchToProps= (dispatch)=>{
+  return{
+      addToCart: (id)=>{dispatch(addToCart(id))}
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Buy)
