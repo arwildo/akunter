@@ -8,6 +8,7 @@ import Home from './pages/Home';
 import Buy from './pages/Buy';
 import Sales from './pages/Sales';
 import Store from './pages/Store';
+import Header from './partials/Header';
 
 function App() {
 
@@ -34,15 +35,19 @@ function App() {
       <Switch>
         <Route exact path="/">
           <Home />
+          <Header />
         </Route>
         <Route path="/buy">
           <Buy />
+          <Header />
         </Route>
         <Route path="/sales">
           <Sales />
+          <Header />
         </Route>
         <Route path="/store">
           <Store />
+          <Header />
         </Route>
       </Switch>
     </>
