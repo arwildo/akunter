@@ -1,8 +1,23 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux'
-import { Link } from 'react-router-dom'
+import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
+
+import { removeItem,addQuantity,subtractQuantity} from '../actions/cartActions';
+import Recipe from '../partials/Recipe';
 
 class Pay extends Component{
+  // Remove the item completely
+  handleRemove = (id)=>{
+    this.props.removeItem(id);
+  }
+  // Add the quantity
+  handleAddQuantity = (id)=>{
+    this.props.addQuantity(id);
+  }
+  // Substruct from the quantity
+  handleSubtractQuantity = (id)=>{
+    this.props.subtractQuantity(id);
+  }
 
   render(){
             
@@ -10,34 +25,63 @@ class Pay extends Component{
       (  
         this.props.items.map(item=>{
           return(
-            
-            <li className="collection-item avatar" key={item.id}>
-              <div className="item-img"> 
-                  <img src={item.img} alt={item.img} className=""/>
+            <div className="bg-white border-b w-full px-auto rounded-t-3xl" key={item.id}>
+              <div className="relative text-gray-500 px-2 md:px-6 pb-6 mt-6">
+                
+                  <div className="flex">
+
+                      <div className="p-2 w-16">
+                        <img src={item.img} alt={item.img} className=""/>
+                      </div>
+
+                      <div className="flex-auto text-md">
+                          {item.title}
+                          <div className="font-bold">
+                            {item.desc}
+                          </div>
+                          <div className="flex flex-row border h-8 w-24 rounded-xl relative">
+                              <button
+                                className="font-semibold bg-gray-400 lg:hover:bg-red-400 activate:bg-red-400 text-white border-gray-400 h-full w-20 flex rounded-l focus:outline-none cursor-pointer"
+                              >
+                                <span className="m-auto">-</span>
+                              </button>
+
+                              <input
+                                className="border-gray-400 text-center bg-white w-10 text-xs md:text-base flex items-center justify-center cursor-default"
+                                readOnly
+                                name="custom-input-number"
+                                value={item.quantity}
+                              />
+
+                              <button
+                                className="font-semibold bg-gray-400 lg:hover:bg-blue-400 activate:bg-blue-400 text-white border-gray-400 h-full w-20 flex rounded-r focus:outline-none cursor-pointer"
+                              >
+                                <span className="m-auto">+</span>
+                              </button>
+                          </div>
+                      </div>
+
+                      <div className="flex flex-col w-18 font-medium items-end">
+                          <button className="w-5 h-5 mb-6 hover:bg-red-200 rounded-full cursor-pointer text-red-700">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feather feather-trash-2 ">
+                                  <polyline points="3 6 5 6 21 6"></polyline>
+                                  <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                                  <line x1="10" y1="11" x2="10" y2="17"></line>
+                                  <line x1="14" y1="11" x2="14" y2="17"></line>
+                              </svg>
+                          </button>
+                          ${item.price}K
+                      </div>
+                </div>
               </div>
-          
-              <div className="item-desc">
-                  <span className="title">{item.title}</span>
-                  <p>{item.desc}</p>
-                  <p><b>Price: {item.price}$</b></p> 
-                  <p>
-                      <b>Quantity: {item.quantity}</b> 
-                  </p>
-                  <div className="add-remove">
-                      <Link to="/cart"><i className="material-icons">arrow_drop_up</i></Link>
-                      <Link to="/cart"><i className="material-icons">arrow_drop_down</i></Link>
-                  </div>
-                  <button className="waves-effect waves-light btn pink remove">Remove</button>
-              </div>
-              
-            </li>                        
+            </div>
           )
         })
       ):
 
       (
-        <div className="text-gray-300 bg-red-300 h-screen"> 
-          <div className="text-gray-300 bg-blue-300 p-auto"> 
+        <div className="flex h-screen justify-center items-center">
+          <div className="text-center text-gray-300">
             <p className="block h-8 text-7xl leading-8 text-center align-middle">
               <i className="mdi mdi-cart-outline"></i>
             </p>
@@ -46,25 +90,15 @@ class Pay extends Component{
         </div>
       )
     return(
-    <>
-      {/*
       <div className="container">
         <div className="cart">
           <ul className="collection">
             {addedItems}
           </ul>
+          {this.props.items.length > 1 &&
+          <Recipe />}
         </div>  
       </div>
-      */}
-      <div className="flex h-screen justify-center items-center">
-        <div className="text-center text-gray-300">
-          <p className="block h-8 text-7xl leading-8 text-center align-middle">
-            <i className="mdi mdi-cart-outline"></i>
-          </p>
-          <p className="block text-sm m-6 leading-none text-center align-middle">Empty</p>
-        </div>
-      </div>
-    </>
     )
   }
 }
@@ -74,5 +108,12 @@ const mapStateToProps = (state)=>{
       items: state.addedItems
   }
 }
+const mapDispatchToProps = (dispatch)=>{
+  return{
+    removeItem: (id)=>{dispatch(removeItem(id))},
+    addQuantity: (id)=>{dispatch(addQuantity(id))},
+    subtractQuantity: (id)=>{dispatch(subtractQuantity(id))}
+  }
+}
 
-export default connect(mapStateToProps)(Pay)
+export default connect(mapStateToProps, mapDispatchToProps)(Pay)
