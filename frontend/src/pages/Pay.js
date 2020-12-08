@@ -42,6 +42,7 @@ class Pay extends Component{
                           <div className="flex flex-row border h-8 w-24 rounded-xl relative">
                               <button
                                 className="font-semibold bg-gray-400 lg:hover:bg-red-400 activate:bg-red-400 text-white border-gray-400 h-full w-20 flex rounded-l focus:outline-none cursor-pointer"
+                                onClick={()=>{this.handleSubtractQuantity(item.id)}}
                               >
                                 <span className="m-auto">-</span>
                               </button>
@@ -55,6 +56,7 @@ class Pay extends Component{
 
                               <button
                                 className="font-semibold bg-gray-400 lg:hover:bg-blue-400 activate:bg-blue-400 text-white border-gray-400 h-full w-20 flex rounded-r focus:outline-none cursor-pointer"
+                                onClick={()=>{this.handleAddQuantity(item.id)}}
                               >
                                 <span className="m-auto">+</span>
                               </button>
@@ -62,7 +64,10 @@ class Pay extends Component{
                       </div>
 
                       <div className="flex flex-col w-18 font-medium items-end">
-                          <button className="w-5 h-5 mb-6 hover:bg-red-200 rounded-full cursor-pointer text-red-700">
+                          <button 
+                            className="w-5 h-5 mb-6 hover:bg-red-200 rounded-full cursor-pointer text-red-700"
+                            onClick={()=>{this.handleRemove(item.id)}}
+                          >
                               <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feather feather-trash-2 ">
                                   <polyline points="3 6 5 6 21 6"></polyline>
                                   <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
@@ -95,7 +100,7 @@ class Pay extends Component{
           <ul className="collection">
             {addedItems}
           </ul>
-          {this.props.items.length > 1 &&
+          {this.props.items.length > 0 &&
           <Recipe />}
         </div>  
       </div>
