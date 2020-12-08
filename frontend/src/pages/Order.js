@@ -13,16 +13,16 @@ class Buy extends Component {
     let itemList = this.props.items.map(item=>{
 
       return(
-        <a className={item.style} key={item.id} onClick={()=>{this.handleClick(item.id)}}>
+        <button className={item.style} key={item.id} onClick={()=>{this.handleClick(item.id)}}>
           <div className="relative text-white px-4 pb-4 mt-4">
             <img src={item.img} alt={item.title + " " + item.desc}/>
-            <span className="block opacity-75 -mb-1">{item.title}</span>
+            <span className="block opacity-75 -mb-1 text-left">{item.title}</span>
             <div className="md:flex justify-between">
-              <span className="block font-semibold text-md md:text-xl">{item.desc}</span>
+              <span className="block font-semibold text-md md:text-xl text-left">{item.desc}</span>
               <span className="block bg-white rounded-full text-purple-500 md:ml-4 mt-2 md:mt-0 text-xs font-bold px-3 py-2 leading-none flex items-center">${item.price}K</span>
             </div>
           </div>
-        </a>
+        </button>
       )
     })
 

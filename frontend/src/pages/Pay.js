@@ -31,7 +31,7 @@ class Pay extends Component{
                   <div className="flex">
 
                       <div className="p-2 w-16">
-                        <img src={item.img} alt={item.img} className=""/>
+                        <img src={item.img} alt={item.img} />
                       </div>
 
                       <div className="flex-auto text-md">
@@ -40,12 +40,13 @@ class Pay extends Component{
                             {item.desc}
                           </div>
                           <div className="flex flex-row border h-8 w-24 rounded-xl relative">
-                              <button
+                              <Link
+                                to="/pay"
                                 className="font-semibold bg-gray-400 lg:hover:bg-red-400 activate:bg-red-400 text-white border-gray-400 h-full w-20 flex rounded-l focus:outline-none cursor-pointer"
                                 onClick={()=>{this.handleSubtractQuantity(item.id)}}
                               >
                                 <span className="m-auto">-</span>
-                              </button>
+                              </Link>
 
                               <input
                                 className="border-gray-400 text-center bg-white w-10 text-xs md:text-base flex items-center justify-center cursor-default"
@@ -54,12 +55,13 @@ class Pay extends Component{
                                 value={item.quantity}
                               />
 
-                              <button
+                              <Link
+                                to="/pay"
                                 className="font-semibold bg-gray-400 lg:hover:bg-blue-400 activate:bg-blue-400 text-white border-gray-400 h-full w-20 flex rounded-r focus:outline-none cursor-pointer"
                                 onClick={()=>{this.handleAddQuantity(item.id)}}
                               >
                                 <span className="m-auto">+</span>
-                              </button>
+                              </Link>
                           </div>
                       </div>
 

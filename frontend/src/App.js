@@ -43,7 +43,7 @@ function App() {
           <Header />
         </Route>
         <Route path="/pay">
-          <Pay />
+          <Pay timestamp={new Date().getTime().toString()}/>
           <Header />
         </Route>
         <Route path="/sales">

@@ -2,7 +2,7 @@ import Item1 from '../images/beef-chicken-original.png'
 import Item2 from '../images/beef-chicken-deluxe.png'
 import Item3 from '../images/beef-madness.png'
 import Item4 from '../images/chicken-crispy.png'
-import { ADD_TO_CART, REMOVE_ITEM, SUB_QUANTITY, ADD_QUANTITY, ADD_SHIPPING } from '../actions/action-types/cart-actions'
+import { ADD_TO_CART, REMOVE_ITEM, SUB_QUANTITY, ADD_QUANTITY } from '../actions/action-types/cart-actions'
 
 
 const initState = {
