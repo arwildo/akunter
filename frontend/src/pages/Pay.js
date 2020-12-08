@@ -49,7 +49,7 @@ class Pay extends Component{
                               </Link>
 
                               <input
-                                className="border-gray-400 text-center bg-white w-10 text-xs md:text-base flex items-center justify-center cursor-default"
+                                className="border-gray-400 text-center font-bold bg-white w-10 text-xs md:text-base flex items-center justify-center cursor-default"
                                 readOnly
                                 name="custom-input-number"
                                 value={item.quantity}
