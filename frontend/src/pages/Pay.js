@@ -42,14 +42,14 @@ class Pay extends Component{
                           <div className="flex flex-row border h-8 w-24 rounded-xl relative">
                               <Link
                                 to="/pay"
-                                className="font-semibold bg-gray-400 lg:hover:bg-red-400 activate:bg-red-400 text-white border-gray-400 h-full w-20 flex rounded-l focus:outline-none cursor-pointer"
+                                className="text-sm bg-gray-300 hover:bg-gray-400 text-gray-800 font-semibold py-2 px-4 rounded-l"
                                 onClick={()=>{this.handleSubtractQuantity(item.id)}}
                               >
                                 <span className="m-auto">-</span>
                               </Link>
 
                               <input
-                                className="border-gray-400 text-center font-bold bg-white w-10 text-xs md:text-base flex items-center justify-center cursor-default"
+                                className="text-center font-bold bg-white w-10 text-xs md:text-base flex items-center justify-center cursor-default"
                                 readOnly
                                 name="custom-input-number"
                                 value={item.quantity}
@@ -57,7 +57,7 @@ class Pay extends Component{
 
                               <Link
                                 to="/pay"
-                                className="font-semibold bg-gray-400 lg:hover:bg-blue-400 activate:bg-blue-400 text-white border-gray-400 h-full w-20 flex rounded-r focus:outline-none cursor-pointer"
+                                className="text-sm bg-gray-300 hover:bg-gray-400 text-gray-800 font-semibold py-2 px-4 rounded-r"
                                 onClick={()=>{this.handleAddQuantity(item.id)}}
                               >
                                 <span className="m-auto">+</span>
@@ -97,14 +97,10 @@ class Pay extends Component{
         </div>
       )
     return(
-      <div className="container">
-        <div className="cart">
-          <ul className="collection">
-            {addedItems}
-          </ul>
-          {this.props.items.length > 0 &&
-          <Recipe />}
-        </div>  
+      <div className="container max-w-5xl mx-auto px-4 sm:px-8">
+        {addedItems}
+        {this.props.items.length > 0 &&
+        <Recipe />}
       </div>
     )
   }
