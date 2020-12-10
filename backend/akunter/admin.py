@@ -2,7 +2,7 @@ from django.contrib import admin
 from .models import Akunter
 
 class AkunterAdmin(admin.ModelAdmin):
-  list_display = ('title', 'description', 'completed')
+  list_display = ('item', 'quantity', 'time')
 
-# Register your models here.
+# Register models
 admin.site.register(Akunter, AkunterAdmin)

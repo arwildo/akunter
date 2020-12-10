@@ -10,10 +10,8 @@
 /coverage
 
 # production
-/public
 /dist
 /build
-frontend/public
 frontend/dist
 frontend/build
 

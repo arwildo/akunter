@@ -4,4 +4,4 @@ from .models import Akunter
 class AkunterSerializer(serializers.ModelSerializer):
   class Meta:
     model = Akunter
-    fields = ('id', 'title', 'description', 'completed')
+    fields = ('id', 'item', 'quantity', 'time')
