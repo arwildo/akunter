@@ -32,7 +32,7 @@ class Sales extends Component {
                   <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
                       <div className="flex items-center">
                           <div className="ml-3">
-                              <p className="text-gray-900 whitespace-no-wrap">
+                              <p className="text-gray-600 whitespace-no-wrap">
                                   {item.id}
                               </p>
                           </div>
@@ -40,13 +40,13 @@ class Sales extends Component {
                   </td>
                   <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
                       <div className="flex items-center">
-                          <p className="text-gray-900 whitespace-no-wrap">
+                          <p className="text-gray-600 whitespace-no-wrap">
                               {menus[item.item]}
                           </p>
                       </div>
                   </td>
                   <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                      <p className="text-gray-900 whitespace-no-wrap">{item.quantity}</p>
+                      <p className="text-gray-600 whitespace-no-wrap">{item.quantity}</p>
                   </td>
                   <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
                       <span
@@ -57,7 +57,7 @@ class Sales extends Component {
                       </span>
                   </td>
                   <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                    <p className="text-gray-900 whitespace-no-wrap">
+                    <p className="text-gray-600 whitespace-no-wrap">
                       {item.time}
                     </p>
                   </td>
@@ -72,7 +72,7 @@ class Sales extends Component {
               <div className="flex items-center">
                 <div className="ml-3">
                 <button onClick={() => console.log(this.state.itemList)}>button</button>
-                  <p className="text-gray-900 whitespace-no-wrap">
+                  <p className="text-gray-600 whitespace-no-wrap">
                       Empty
                   </p>
                 </div>
@@ -120,7 +120,7 @@ class Sales extends Component {
                   <div
                       className="px-5 py-5 bg-white border-t flex flex-col xs:flex-row items-center xs:justify-between">
 
-                      <span className="text-xs xs:text-sm text-gray-900">
+                      <span className="text-xs xs:text-sm text-gray-600">
                           1 to 4 of 50 Data
                       </span>
 
