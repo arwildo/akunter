@@ -25,7 +25,7 @@ class Sales extends Component {
     let prices = [22, 32, 44, 20, 28, 30]
     let pulledItems = this.state.itemList ?
       (
-        this.state.itemList.map(item=>{
+        this.state.itemList.reverse().map(item=>{
           return(
             <tbody key={item.id}>
               <tr>
@@ -33,9 +33,16 @@ class Sales extends Component {
                       <div className="flex items-center">
                           <div className="ml-3">
                               <p className="text-gray-900 whitespace-no-wrap">
-                                  {menus[item.item]}
+                                  {item.id}
                               </p>
                           </div>
+                      </div>
+                  </td>
+                  <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                      <div className="flex items-center">
+                          <p className="text-gray-900 whitespace-no-wrap">
+                              {menus[item.item]}
+                          </p>
                       </div>
                   </td>
                   <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
@@ -84,6 +91,10 @@ class Sales extends Component {
 
                       <thead>
                           <tr>
+                              <th
+                                  className="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                                  No
+                              </th>
                               <th
                                   className="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
                                   Item
