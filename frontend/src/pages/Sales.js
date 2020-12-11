@@ -41,7 +41,7 @@ class Sales extends Component {
                   <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
                       <div className="flex items-center">
                           <p className="text-gray-600 whitespace-no-wrap">
-                              {menus[item.item]}
+                              {menus[item.item - 1]}
                           </p>
                       </div>
                   </td>
@@ -53,7 +53,7 @@ class Sales extends Component {
                           className="relative inline-block px-3 py-1 font-semibold text-green-900 leading-tight">
                           <span aria-hidden
                               className="absolute inset-0 bg-green-200 opacity-50 rounded-full"></span>
-                          <span className="relative">${prices[item.item]}K</span>
+                          <span className="relative">${prices[item.item - 1]}K</span>
                       </span>
                   </td>
                   <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
