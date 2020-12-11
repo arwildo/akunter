@@ -25,7 +25,7 @@ class Pay extends Component{
       (  
         this.props.items.map(item=>{
           return(
-            <div className="bg-white border w-full px-auto rounded-lg mb-1" key={item.id}>
+            <div className="bg-white border w-full px-auto rounded-lg my-2" key={item.id}>
               <div className="relative text-gray-500 px-2 md:px-6 pb-6 mt-6">
                 
                   <div className="flex">
@@ -97,7 +97,7 @@ class Pay extends Component{
         </div>
       )
     return(
-      <div className="container max-w-5xl mx-auto px-4 py-2 sm:px-8">
+      <div className="container max-w-5xl mx-auto px-4 sm:px-8">
         {addedItems}
         {this.props.items.length > 0 &&
         <Recipe />}

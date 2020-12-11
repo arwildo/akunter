@@ -3,15 +3,25 @@ import { connect } from 'react-redux';
 import { addToCart } from '../actions/cartActions';
 
 class Buy extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      showAlert: false,
+      itemId: "Loading..."
+    }
+
+    this.itemName = ["Beef Original", "Beef Deluxe", "Beef Madness", "Chicken Original", "Chicken Crispy", "Chicken Deluxe"]
+  }
 
   handleClick = (id)=>{
     this.props.addToCart(id); 
+    this.setState({showAlert: true, itemId: id});
   }
 
   render() {
 
     let itemList = this.props.items.map(item=>{
-
       return(
         <button className={item.style} key={item.id} onClick={()=>{this.handleClick(item.id)}}>
           <div className="relative text-white px-4 pb-4 mt-4">
@@ -32,6 +42,16 @@ class Buy extends Component {
           <div className="p-18 flex flex-wrap items-center justify-center max-w-3xl mx-auto">
             {itemList}
           </div>
+          { this.state.showAlert && (
+          <div className="-m-2 text-center">
+            <div className="p-2">
+              <div className="inline-flex items-center bg-white leading-none rounded-full p-2 shadow text-sm">
+                <span class="inline-flex px-2">{this.itemName[this.state.itemId - 1]}</span>
+                <span className="inline-flex bg-blue-500 font-bold text-white rounded-full h-6 px-3 justify-center items-center">Added</span>
+              </div>
+            </div>
+          </div>
+          )}
         </main>
       </div>
     )
