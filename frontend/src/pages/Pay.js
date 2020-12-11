@@ -20,7 +20,6 @@ class Pay extends Component{
   }
 
   render(){
-            
     let addedItems = this.props.items.length ?
       (  
         this.props.items.map(item=>{
