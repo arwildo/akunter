@@ -52,26 +52,30 @@ class Header extends Component {
           <Link to="/pay" className="flex flex-grow items-center justify-center p-2 text-blue-500 hover:text-blue-500">
             <div className="text-center"> <span className="block h-8 text-3xl leading-8">
                 <i className="mdi mdi-cart-plus"></i>
-                <p
-                    className="absolute inline-block px-2 py-1 font-bold text-xs text-white leading-tight">
-                    <span aria-hidden
-                      className="absolute inset-0 bg-red-500 opacity-50 rounded-full">
-                    </span>
-                    <span className="relative">{this.props.items.length}</span>
-                </p>
+                {this.props.items.length > 0 && 
+                  <p
+                      className="absolute inline-block px-2 py-1 font-bold text-xs text-white leading-tight">
+                      <span aria-hidden
+                        className="absolute inset-0 bg-red-500 opacity-50 rounded-full">
+                      </span>
+                      <span className="relative">{this.props.items.length}</span>
+                  </p>
+                }
               </span>
               <span className="block text-xs leading-none">Pay</span>
             </div>
           </Link> : <Link to="/pay" className="flex flex-grow items-center justify-center p-2 text-gray-500 hover:text-blue-500">
             <div className="text-center"> <span className="block h-8 text-3xl leading-8">
                 <i className="mdi mdi-cart-plus"></i>
-                <p
-                    className="absolute inline-block px-2 py-1 font-bold text-xs text-white leading-tight">
-                    <span aria-hidden
-                      className="absolute inset-0 bg-red-500 opacity-50 rounded-full">
-                    </span>
-                    <span className="relative">{this.props.items.length}</span>
-                </p>
+                {this.props.items.length > 0 && 
+                  <p
+                      className="absolute inline-block px-2 py-1 font-bold text-xs text-white leading-tight">
+                      <span aria-hidden
+                        className="absolute inset-0 bg-red-500 opacity-50 rounded-full">
+                      </span>
+                      <span className="relative">{this.props.items.length}</span>
+                  </p>
+                }
               </span>
               <span className="block text-xs leading-none">Pay</span>
             </div>
