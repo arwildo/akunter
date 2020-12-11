@@ -111,6 +111,7 @@ const mapStateToProps = (state)=>{
       items: state.addedItems
   }
 }
+
 const mapDispatchToProps = (dispatch)=>{
   return{
     removeItem: (id)=>{dispatch(removeItem(id))},
