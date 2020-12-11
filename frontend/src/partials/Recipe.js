@@ -1,18 +1,25 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import axios from 'axios';
 
 class Recipe extends Component{
 
   saveData = (data) => {
     const d = new Date(),
-      dformat = [d.getMonth()+1,
-                d.getDate(),
+      dformat = [d.getDate(),
+                d.getMonth()+1,
                 d.getFullYear()].join('-')+' '+
                 [d.getHours(),
                 d.getMinutes()].join(':');
 
-    console.log(data.id + " " + data.quantity + " " + dformat);
+    let activeData = {item: data.id, quantity: data.quantity, time: dformat}
+    console.log(activeData);
+
+    axios
+      .post("/api/akunters/", activeData);
+    console.log("success");
   }
+
 
   render(){
     return(
