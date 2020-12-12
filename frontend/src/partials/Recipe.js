@@ -2,7 +2,13 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import axios from 'axios';
 
+import { removeItem} from '../actions/cartActions';
+
 class Recipe extends Component{
+  // Remove the item completely
+  handleRemove = (id)=>{
+    this.props.removeItem(id);
+  }
 
   saveData = (data) => {
     const d = new Date(),
@@ -17,6 +23,8 @@ class Recipe extends Component{
 
     axios
       .post("/api/akunters/", activeData);
+    this.handleRemove(data.id);
+
     console.log("success");
   }
 
@@ -34,11 +42,18 @@ class Recipe extends Component{
     )
   }
 }
+
 const mapStateToProps = (state)=>{
   return{
     addedItems: state.addedItems,
     total: state.total
   }
 }
+const mapDispatchToProps = (dispatch)=>{
+  return{
+    removeItem: (id)=>{dispatch(removeItem(id))}
+  }
+}
 
-export default connect(mapStateToProps)(Recipe)
+
+export default connect(mapStateToProps, mapDispatchToProps)(Recipe)

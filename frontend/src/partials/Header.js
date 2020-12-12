@@ -52,7 +52,7 @@ function Header(props) {
                 <p
                     className="absolute inline-block px-2 py-1 font-bold text-xs text-white leading-tight">
                     <span aria-hidden
-                      className="absolute inset-0 bg-red-500 opacity-50 rounded-full">
+                      className="absolute inset-0 bg-red-500 opacity-100 rounded-full">
                     </span>
                     <span className="relative">{props.items.length}</span>
                 </p>
@@ -67,7 +67,7 @@ function Header(props) {
                 <p
                     className="absolute inline-block px-2 py-1 font-bold text-xs text-white leading-tight">
                     <span aria-hidden
-                      className="absolute inset-0 bg-red-500 opacity-50 rounded-full">
+                      className="absolute inset-0 bg-red-500 opacity-100 rounded-full">
                     </span>
                     <span className="relative">{props.items.length}</span>
                 </p>
