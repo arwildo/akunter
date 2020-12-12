@@ -29,7 +29,7 @@ class Sales extends Component {
           return(
             <tbody key={item.id}>
               <tr>
-                  <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                  <td className="px-3 py-5 border-b border-gray-200 bg-white text-sm">
                       <div className="flex items-center">
                           <div className="ml-3">
                               <p className="text-gray-600 whitespace-no-wrap">
@@ -38,25 +38,28 @@ class Sales extends Component {
                           </div>
                       </div>
                   </td>
-                  <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                  <td className="px-3 py-5 border-b border-gray-200 bg-white text-sm">
                       <div className="flex items-center">
                           <p className="text-gray-600 whitespace-no-wrap">
                               {menus[item.item - 1]}
                           </p>
                       </div>
                   </td>
-                  <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                  <td className="px-3 py-5 border-b border-gray-200 bg-white text-sm">
                       <p className="text-gray-600 whitespace-no-wrap">{item.quantity}</p>
                   </td>
-                  <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                  <td className="px-3 py-5 border-b border-gray-200 bg-white text-sm">
+                      <p className="text-gray-600 whitespace-no-wrap">{prices[item.item - 1]}K</p>
+                  </td>
+                  <td className="px-1 py-5 border-b border-gray-200 bg-white text-sm">
                       <span
                           className="relative inline-block px-3 py-1 font-semibold text-green-900 leading-tight">
                           <span aria-hidden
                               className="absolute inset-0 bg-green-200 opacity-50 rounded-full"></span>
-                          <span className="relative">${prices[item.item - 1]}K</span>
+                          <span className="relative">{(prices[item.item - 1]) * (item.quantity)}K</span>
                       </span>
                   </td>
-                  <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                  <td className="px-3 py-5 border-b border-gray-200 bg-white text-sm">
                     <p className="text-gray-600 whitespace-no-wrap">
                       {item.time}
                     </p>
@@ -92,23 +95,27 @@ class Sales extends Component {
                       <thead>
                           <tr>
                               <th
-                                  className="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                                  className="px-6 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
                                   No
                               </th>
                               <th
-                                  className="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                                  className="px-3 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
                                   Item
                               </th>
                               <th
-                                  className="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                                  className="px-3 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
                                   Q
                               </th>
                               <th
-                                  className="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                                  className="px-3 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
                                   Price
                               </th>
                               <th
-                                  className="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                                  className="px-3 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                                  Total
+                              </th>
+                              <th
+                                  className="px-3 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
                                   Time
                               </th>
                           </tr>
