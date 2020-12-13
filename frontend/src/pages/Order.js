@@ -18,7 +18,7 @@ class Buy extends Component {
             <span className="block opacity-75 -mb-1 text-left">{item.title}</span>
             <div className="md:flex justify-between">
               <span className="block font-semibold text-md md:text-xl text-left">{item.desc}</span>
-              <span className="block bg-white rounded-full text-purple-500 md:ml-4 mt-2 md:mt-0 text-xs font-bold px-3 py-2 leading-none flex items-center">${item.price}K</span>
+              <span className="block bg-white rounded-full text-purple-500 md:ml-4 mt-2 md:mt-0 text-xs font-bold px-3 py-2 leading-none flex items-center">$ {item.price}K</span>
             </div>
           </div>
         </button>

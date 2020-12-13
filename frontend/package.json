@@ -4,7 +4,9 @@
   "private": true,
   "proxy": "http://localhost:8000",
   "dependencies": {
+    "@antv/g2plot": "^2.3.2",
     "@craco/craco": "^5.7.0",
+    "@opd/g2plot-react": "^2.5.0",
     "@tailwindcss/custom-forms": "^0.2.1",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
@@ -23,7 +25,7 @@
     "react-scripts": "3.4.1",
     "react-transition-group": "^4.4.1",
     "redux": "^4.0.5",
-    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.1"
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.2"
   },
   "scripts": {
     "start": "craco start",

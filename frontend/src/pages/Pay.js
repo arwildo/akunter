@@ -64,7 +64,7 @@ class Pay extends Component{
                           </div>
                       </div>
 
-                      <div className="flex flex-col w-18 font-medium items-end">
+                      <div className="flex flex-col w-18 font-medium items-center">
                           <button 
                             className="w-5 h-5 mb-6 hover:bg-red-200 rounded-full cursor-pointer text-red-700"
                             onClick={()=>{this.handleRemove(item.id)}}
@@ -76,7 +76,7 @@ class Pay extends Component{
                                   <line x1="14" y1="11" x2="14" y2="17"></line>
                               </svg>
                           </button>
-                          ${item.price}K
+                          $ {item.price}K
                       </div>
                 </div>
               </div>

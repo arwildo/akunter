@@ -36,7 +36,7 @@ class Recipe extends Component{
           className="text-base mx-auto mt-12 mb-28 bg-blue-500 text-white hover:bg-indigo-500 flex justify-center px-4 py-2 rounded-full font-bold cursor-pointer transform transition-all duration-300 scale-100 hover:scale-95"
           onClick={() => this.props.addedItems.map(this.saveData)}
         >
-          Checkout ${this.props.total}K
+          Checkout $ {this.props.total}K
         </button>
       </div>
     )
