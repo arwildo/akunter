@@ -9,7 +9,8 @@ class Store extends Component {
       dataFetch : [],
       dataPlot: [],
       prices : [22, 32, 44, 20, 28, 30],
-      todayIncomes : 0
+      todayIncomes : 0,
+      monthIncomes : 0
     };
   }
 
@@ -22,33 +23,38 @@ class Store extends Component {
     this.setState({ dataFetch: response.data });
 
     // Executes calculate functions
-    this.getTodayIncomes();
+    this.getIncomes();
   };
 
 
-  getTodayIncomes = () => {
-    let todaySum = 0
+  getIncomes = () => {
+    let todaySum = 0;
+    let monthSum = 0;
 
     const d = new Date(),
       dformat = [d.getDate(),
                 d.getMonth()+1,
                 d.getFullYear()].join('-');
 
-    console.log(dformat);
-    console.log(this.state.dataFetch);
-
-    const calTotal = (i) => {
-
+    // Get incomes total for day and month
+    const calDayMonth = (i) => {
       let timeData = i.time.split(" ")[0];
+      let timeMonth = timeData.split("-")[1];
 
       if (dformat === timeData) {
-        let income = this.state.prices[i.item-1] * i.quantity;
-        todaySum += income;
+        let thisDay = this.state.prices[i.item-1] * i.quantity;
+        todaySum += thisDay;
+      }
+
+      if (d.getMonth()+1 == timeMonth) {
+        let thisMonth = this.state.prices[i.item-1] * i.quantity;
+        monthSum += thisMonth;
       }
     }
 
-    this.state.dataFetch.map(calTotal);
+    this.state.dataFetch.map(calDayMonth);
     this.setState({ todayIncomes: todaySum });
+    this.setState({ monthIncomes: monthSum });
   }
 
   render() {
@@ -76,7 +82,7 @@ class Store extends Component {
                 </div>
                 <div className="flex flex-col flex-grow ml-4">
                   <div className="text-sm text-gray-500">Month</div>
-                  <div className="font-bold text-lg">$ 1082k</div>
+                  <div className="font-bold text-lg">$ {this.state.monthIncomes}k</div>
                 </div>
               </div>
             </div>
@@ -108,3 +114,4 @@ class Store extends Component {
 }
 
 export default Store;
+/* eslint eqeqeq: 0 */
