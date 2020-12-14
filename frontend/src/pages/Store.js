@@ -22,11 +22,12 @@ class Store extends Component {
     const response = await axios.get("/api/akunters/");
     this.setState({ dataFetch: response.data });
 
-    // Executes calculate functions
     this.getIncomes();
+    this.plotData();
   };
 
 
+  // Get incomes total for day and month
   getIncomes = () => {
     let todaySum = 0;
     let monthSum = 0;
@@ -36,7 +37,6 @@ class Store extends Component {
                 d.getMonth()+1,
                 d.getFullYear()].join('-');
 
-    // Get incomes total for day and month
     const calDayMonth = (i) => {
       let timeData = i.time.split(" ")[0];
       let timeMonth = timeData.split("-")[1];
@@ -50,12 +50,31 @@ class Store extends Component {
         let thisMonth = this.state.prices[i.item-1] * i.quantity;
         monthSum += thisMonth;
       }
-    }
+    };
+
+    // TODO: fix bug for month but different year
 
     this.state.dataFetch.map(calDayMonth);
     this.setState({ todayIncomes: todaySum });
     this.setState({ monthIncomes: monthSum });
-  }
+  };
+
+  // Plot data to graph for daily income
+  plotData = () => {
+    const d = new Date(),
+      dformat = [d.getDate(),
+                d.getMonth()+1,
+                d.getFullYear()].join('-');
+
+    const processData = (i) => {
+      let timeData = i.time.split(" ")[0];
+      let timeMonth = timeData.split("-")[1];
+
+      if (d.getMonth()+1 == timeMonth) {
+        console.log(i);
+      };
+    };
+  };
 
   render() {
     return (
@@ -91,7 +110,7 @@ class Store extends Component {
               <div className="flex flex-row bg-white shadow-md rounded p-4">
                 <div className="rounded overflow-hidden w-full md:flex">
                   <div className="flex w-full bg-white items-center">
-                    <Chart padding={[10, 20, 50, 40]} autoFit height={300} data={this.state.dataFetch} >
+                    <Chart padding={[10, 20, 50, 40]} autoFit height={300} data={this.state.dataPlot} >
                       <LineAdvance
                         shape="smooth"
                         point
@@ -103,7 +122,6 @@ class Store extends Component {
                   </div>
                 </div>
               </div>
-              <button onClick={() => console.log(this.state.dataFetch)}>test123</button>
             </div>
 
           </div>
