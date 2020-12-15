@@ -12,6 +12,12 @@ class Store extends Component {
       todayIncomes : 0,
       monthIncomes : 0
     };
+    this.d = new Date();
+    this.dformat = [this.d.getDate(),
+                this.d.getMonth()+1,
+                this.d.getFullYear()].join('-');
+    this.mformat = [this.d.getMonth()+1,
+                this.d.getFullYear()].join('-');
   }
 
   componentDidMount() {
@@ -32,23 +38,16 @@ class Store extends Component {
     let todaySum = 0;
     let monthSum = 0;
 
-    const d = new Date();
-    const dformat = [d.getDate(),
-                d.getMonth()+1,
-                d.getFullYear()].join('-');
-    const mformat = [d.getMonth()+1,
-                d.getFullYear()].join('-');
-
     const calDayMonth = (i) => {
       let timeData = i.time.split(" ")[0];
       let timeMonth = timeData.split("-")[1] + "-" + timeData.split("-")[2];
 
-      if (dformat === timeData) {
+      if (this.dformat === timeData) {
         let thisDay = this.state.prices[i.item-1] * i.quantity;
         todaySum += thisDay;
       }
 
-      if (mformat == timeMonth) {
+      if (this.mformat == timeMonth) {
         let thisMonth = this.state.prices[i.item-1] * i.quantity;
         monthSum += thisMonth;
       }
@@ -61,16 +60,11 @@ class Store extends Component {
 
   // Plot data to graph for daily income
   plotData = () => {
-    const d = new Date(),
-      dformat = [d.getDate(),
-                d.getMonth()+1,
-                d.getFullYear()].join('-');
-
     const processData = (i) => {
       let timeData = i.time.split(" ")[0];
       let timeMonth = timeData.split("-")[1];
 
-      if (d.getMonth()+1 == timeMonth) {
+      if (this.d.getMonth()+1 == timeMonth) {
         console.log(i);
       };
     };
