@@ -32,27 +32,27 @@ class Store extends Component {
     let todaySum = 0;
     let monthSum = 0;
 
-    const d = new Date(),
-      dformat = [d.getDate(),
+    const d = new Date();
+    const dformat = [d.getDate(),
                 d.getMonth()+1,
+                d.getFullYear()].join('-');
+    const mformat = [d.getMonth()+1,
                 d.getFullYear()].join('-');
 
     const calDayMonth = (i) => {
       let timeData = i.time.split(" ")[0];
-      let timeMonth = timeData.split("-")[1];
+      let timeMonth = timeData.split("-")[1] + "-" + timeData.split("-")[2];
 
       if (dformat === timeData) {
         let thisDay = this.state.prices[i.item-1] * i.quantity;
         todaySum += thisDay;
       }
 
-      if (d.getMonth()+1 == timeMonth) {
+      if (mformat == timeMonth) {
         let thisMonth = this.state.prices[i.item-1] * i.quantity;
         monthSum += thisMonth;
       }
     };
-
-    // TODO: fix bug for month but different year
 
     this.state.dataFetch.map(calDayMonth);
     this.setState({ todayIncomes: todaySum });
