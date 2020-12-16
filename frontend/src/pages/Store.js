@@ -58,16 +58,25 @@ class Store extends Component {
     this.setState({ monthIncomes: monthSum });
   };
 
-  // Plot data to graph for daily income
+  // Plot data to graph for daily income for the last 30 days
   plotData = () => {
-    const processData = (i) => {
-      let timeData = i.time.split(" ")[0];
-      let timeMonth = timeData.split("-")[1];
 
-      if (this.d.getMonth()+1 == timeMonth) {
-        console.log(i);
-      };
-    };
+    // first get all the days
+    let last30Days;
+    let dates = []
+    let dateNow = new Date(Date.now() + (3600 * 1000 * 24 * 2));
+
+    for (let day=31; day>1; day--) {
+      last30Days = new Date(dateNow - day * 24 * 60 * 60 * 1000).toISOString();
+      let clean = last30Days.split(":")[0];
+      clean = clean.split("T01")[0];
+      clean = clean.split("-").reverse();
+      clean = clean.join("-");
+      dates.push(clean);
+    }
+
+    // second get the total income on each dates
+
   };
 
   render() {
