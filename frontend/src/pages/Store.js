@@ -10,7 +10,8 @@ class Store extends Component {
       dataPlot: [],
       prices : [22, 32, 44, 20, 28, 30],
       todayIncomes : 0,
-      monthIncomes : 0
+      monthIncomes : 0,
+      incomesLast30Days : []
     };
     this.d = new Date();
     this.dformat = [this.d.getDate(),
@@ -61,22 +62,49 @@ class Store extends Component {
   // Plot data to graph for daily income for the last 30 days
   plotData = () => {
 
-    // first get all the days
+    // Vars
     let last30Days;
     let dates = []
     let dateNow = new Date(Date.now() + (3600 * 1000 * 24 * 2));
+    let dateThatHasData = []
 
+    // Get all the days
     for (let day=31; day>1; day--) {
       last30Days = new Date(dateNow - day * 24 * 60 * 60 * 1000).toISOString();
       let clean = last30Days.split(":")[0];
-      clean = clean.split("T01")[0];
+      clean = clean.split("T")[0];
       clean = clean.split("-").reverse();
       clean = clean.join("-");
       dates.push(clean);
     }
 
-    // second get the total income on each dates
+    // Get date that has sale
+    const get30DaySum = (i) => {
+      let timeDate = i.time.split(" ")[0];
 
+      dates.forEach(function (value) {
+        if (timeDate == value) {
+          dateThatHasData.push(value);
+        }
+      });
+
+    };
+
+    this.state.dataFetch.map(get30DaySum);
+    dateThatHasData = [...new Set(dateThatHasData)];
+
+    // Calculate the incomes
+    const cal30DaysData = (i) => {
+      let timeData = i.time.split(" ")[0];
+
+      for (let date in dateThatHasData) {
+        if (timeData == dateThatHasData[date]) {
+          console.log(dateThatHasData[date]);
+        }
+      }
+    };
+
+    this.state.dataFetch.map(cal30DaysData);
   };
 
   render() {
