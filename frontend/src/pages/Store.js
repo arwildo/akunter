@@ -59,6 +59,7 @@ class Store extends Component {
     this.setState({ monthIncomes: monthSum });
   };
 
+
   // Plot data to graph for daily income for the last 30 days
   plotData = () => {
 
@@ -66,7 +67,6 @@ class Store extends Component {
     let last30Days;
     let dates = []
     let dateNow = new Date(Date.now() + (3600 * 1000 * 24 * 2));
-    let dateThatHasData = []
 
     // Get all the days
     for (let day=31; day>1; day--) {
@@ -79,7 +79,8 @@ class Store extends Component {
     }
 
     // Get date that has sale
-    const get30DaySum = (i) => {
+    let dateThatHasData = []
+    const get30DayData = (i) => {
       let timeDate = i.time.split(" ")[0];
 
       dates.forEach(function (value) {
@@ -90,21 +91,26 @@ class Store extends Component {
 
     };
 
-    this.state.dataFetch.map(get30DaySum);
+    this.state.dataFetch.map(get30DayData);
     dateThatHasData = [...new Set(dateThatHasData)];
 
     // Calculate the incomes
-    const cal30DaysData = (i) => {
-      let timeData = i.time.split(" ")[0];
+    let all30DaysSum = [];
+    let prices = this.state.prices
 
-      for (let date in dateThatHasData) {
-        if (timeData == dateThatHasData[date]) {
-          console.log(dateThatHasData[date]);
+    const calculate30daysSum = (date) => {
+      let todaySum = 0;
+
+      this.state.dataFetch.map(function (i) {
+        if (i.time.split(" ")[0] == date) {
+          let thisDay = prices[i.item-1] * i.quantity;
+          todaySum += thisDay;
         }
-      }
+      });
+      console.log(todaySum);
     };
 
-    this.state.dataFetch.map(cal30DaysData);
+    dateThatHasData.map(calculate30daysSum);
   };
 
   render() {
