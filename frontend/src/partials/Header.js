@@ -82,14 +82,14 @@ function Header(props) {
         <Link to="/sales" className="flex flex-grow items-center justify-center p-2 text-blue-500 hover:text-blue-500">
           <div className="text-center">
             <span className="block h-8 text-3xl leading-8">
-              <i className="mdi mdi-table"></i>
+              <i className="mdi mdi-text-box-check-outline"></i>
             </span>
             <span className="block text-xs leading-none">Sales</span>
           </div>
         </Link> : <Link to="/sales" className="flex flex-grow items-center justify-center p-2 text-gray-500 hover:text-blue-500">
           <div className="text-center">
             <span className="block h-8 text-3xl leading-8">
-              <i className="mdi mdi-table"></i>
+              <i className="mdi mdi-text-box-check-outline"></i>
             </span>
             <span className="block text-xs leading-none">Sales</span>
           </div>
