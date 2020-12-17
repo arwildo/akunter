@@ -106,11 +106,13 @@ class Store extends Component {
           let thisDay = prices[i.item-1] * i.quantity;
           todaySum += thisDay;
         }
+        return todaySum;
       });
-      console.log(todaySum);
+      all30DaysSum.push({Date: date.split("-")[0], Income: todaySum});
     };
 
     dateThatHasData.map(calculate30daysSum);
+    this.setState({ dataPlot: all30DaysSum });
   };
 
   render() {
@@ -152,8 +154,7 @@ class Store extends Component {
                         shape="smooth"
                         point
                         area
-                        position="month*temperature"
-                        color="city"
+                        position="Date*Income"
                       />
                     </Chart>
                   </div>
