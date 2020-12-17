@@ -147,7 +147,7 @@ class Store extends Component {
 
             <div className="col-span-12 sm:col-span-6">
               <div className="top-0 right-0 mr-3 w-28 py-4 px-2">
-                <div className="rounded-full bg-blue-500 text-white text-xs py-1 pl-4 pr-3 leading-none"><i className="mdi mdi-cash-register text-base align-middle"></i> <span className="align-middle">30 Days</span></div>
+                <div className="rounded-full bg-blue-500 text-white text-xs py-1 pl-3 pr-3 leading-none"><i className="mdi mdi-chart-box-outline text-base align-middle"></i> <span className="align-middle">30 Days</span></div>
               </div>
               <div className="flex flex-row bg-white shadow-md rounded p-4">
                 <div className="rounded overflow-hidden w-full md:flex">
