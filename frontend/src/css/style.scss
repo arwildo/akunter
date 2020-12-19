@@ -4,18 +4,15 @@
 @tailwind components;
 
 // Additional styles
-@import 'additional-styles/utility-patterns.scss';
-@import 'additional-styles/range-slider.scss';
-@import 'additional-styles/toggle-switch.scss';
-@import 'additional-styles/theme.scss';
+@import 'additional-styles/paginator.scss';
 
 @tailwind utilities;
 
 // Additional Tailwind directives: https://tailwindcss.com/docs/functions-and-directives/#responsive
 @responsive {
-    .rtl {
-        direction: rtl;
-    }
+  .rtl {
+    direction: rtl;
+  }
 }
 
 // See Alpine.js: https://github.com/alpinejs/alpine#x-cloak

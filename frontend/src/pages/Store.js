@@ -140,7 +140,7 @@ class Store extends Component {
                 </div>
                 <div className="flex flex-col flex-grow ml-4">
                   <div className="text-sm text-gray-500">Month</div>
-                  <div className="font-bold text-lg">$ {this.state.monthIncomes}k</div>
+                  <div className="font-bold text-lg">$ {this.state.monthIncomes}K</div>
                 </div>
               </div>
             </div>
