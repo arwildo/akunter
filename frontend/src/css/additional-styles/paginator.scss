@@ -1,36 +1,29 @@
-$main-color: #6B7280;
+$grayLight: #E5E7EB;
+$grayMed: #6B7280;
+$grayHeavy: #374151;
 
 .pagination {
   margin: 15px auto;
   padding-bottom: 3rem;
   display: flex;
   list-style: none;
-  outline: none;
+  font-weight: 600;
+  --tw-text-opacity: 1;
+  color: rgba(75, 85, 99, var(--tw-text-opacity));
 }
 .pagination > .active > a{
-  background-color: $main-color ;
-  border-color: $main-color ;
-  color: #F3F4F6;
+  background-color: $grayMed;
 }
 .pagination > li > a{
-  border: 1px solid $main-color ;
-  padding: 5px 10px;
-  outline: none;
   cursor: pointer;
+  background-color: $grayLight;
+  padding: 0.5rem 0.75rem 0.5rem 0.75rem;
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+  border-radius: 0.5rem;
 }
 .pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus{
-  background-color: $main-color ;
-  border-color: $main-color;
-  outline: none ;
+  background-color: #EFEFEC;
 }
-.pagination > li > a, .pagination > li > span{
-  color: $main-color
-}
-.pagination > li:first-child > a, .pagination > li:first-child > span{
-  border-top-left-radius: 0.5rem;
-  border-bottom-left-radius: 0.5rem;
-}
-.pagination > li:last-child > a, .pagination > li:last-child > span{
-  border-top-right-radius: 0.5rem;
-  border-bottom-right-radius: 0.5rem;
+.pagination > li > a{
 }
