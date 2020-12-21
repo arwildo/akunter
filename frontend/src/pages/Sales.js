@@ -40,7 +40,11 @@ class Sales extends Component {
                 <td className="px-1 py-3 sm:px-2 border-b border-gray-200 bg-white text-sm">
                     <div className="flex items-center">
                         <p className="text-gray-600 whitespace-no-wrap">
-                            {this.menus[item.item - 1]}
+                            {this.menus[item.item - 1].split(' ')[0]}
+                            <br />
+                            <p className="font-semibold">
+                              {this.menus[item.item - 1].split(' ')[1]}
+                            </p>
                         </p>
                     </div>
                 </td>
@@ -143,7 +147,7 @@ class Sales extends Component {
 
                   </table>
 
-                  <div className="px-5 py-5 bg-white border-t flex flex-col xs:flex-row items-center xs:justify-between">
+                  <div className="p-2 bg-white border-t flex flex-col xs:flex-row items-center xs:justify-between">
                       <ReactPaginate
                           previousLabel={"Prev"}
                           nextLabel={"Next"}
