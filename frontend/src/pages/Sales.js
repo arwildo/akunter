@@ -28,7 +28,7 @@ class Sales extends Component {
         const slice = data.reverse().slice(this.state.offset, this.state.offset + this.state.perPage)
         const postData = slice.map(item => <tbody key={item.id}>
             <tr>
-                <td className="px-1 py-3 sm:px-3 sm:py-5 border-b border-gray-200 bg-white text-sm">
+                <td className="px-1 py-3 sm:px-3 sm:py-3 border-b border-gray-200 bg-white text-sm">
                     <div className="flex items-center">
                         <div className="ml-3">
                             <p className="text-gray-600 whitespace-no-wrap">
@@ -37,14 +37,14 @@ class Sales extends Component {
                         </div>
                     </div>
                 </td>
-                <td className="px-1 py-3 sm:px-2 sm:py-5 border-b border-gray-200 bg-white text-sm">
+                <td className="px-1 py-3 sm:px-2 sm:py-3 border-b border-gray-200 bg-white text-sm">
                     <div className="flex items-center">
                         <p className="text-gray-600 whitespace-no-wrap">
                             {this.menus[item.item - 1]}
                         </p>
                     </div>
                 </td>
-                <td className="px-1 py-3 sm:py-5 border-b border-gray-200 bg-white text-sm">
+                <td className="px-1 py-3 sm:py-0 border-b border-gray-200 bg-white text-sm">
                     <span
                         className="relative inline-block px-2 py-1 font-semibold text-blue-900 leading-tight">
                         <span aria-hidden
@@ -52,10 +52,10 @@ class Sales extends Component {
                         <span className="relative">{item.quantity}</span>
                     </span>
                 </td>
-                <td className="px-1 py-3 sm:px-3 sm:py-5 border-b border-gray-200 bg-white text-sm">
+                <td className="px-1 py-3 sm:px-3 sm:py-3 border-b border-gray-200 bg-white text-sm">
                     <p className="text-gray-600 whitespace-no-wrap">{this.prices[item.item - 1]}K</p>
                 </td>
-                <td className="px-1 py-3 sm:px-1 sm:py-5 border-b border-gray-200 bg-white text-sm">
+                <td className="px-1 py-3 sm:px-1 sm:py-3 border-b border-gray-200 bg-white text-sm">
                     <span
                         className="relative inline-block px-3 py-1 font-semibold text-green-900 leading-tight">
                         <span aria-hidden
@@ -63,7 +63,7 @@ class Sales extends Component {
                         <span className="relative">{(this.prices[item.item - 1]) * (item.quantity)}K</span>
                     </span>
                 </td>
-                <td className="px-1 py-3 sm:px-2 sm:py-5 border-b border-gray-200 bg-white text-sm">
+                <td className="px-1 py-3 sm:px-2 sm:py-3 border-b border-gray-200 bg-white text-sm">
                   <p className="text-gray-600 whitespace-no-wrap">
                     {/* Date and month */}
                     {item.time.split(' ')[0].split('-')[0] + '-' +item.time.split(' ')[0].split('-')[1] + '-'}
