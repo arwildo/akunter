@@ -20,11 +20,12 @@ $grayHeavy: #374151;
   background-color: $grayLight;
   padding: 0.5rem 0.75rem 0.5rem 0.75rem;
 
-  margin-left: 0.25rem;
-  margin-right: 0.25rem;
+  margin-left: 0.15rem;
+  margin-right: 0.15rem;
   border-radius: 0.5rem;
 }
 .pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus{
   background-color: #EFEFEF;
+  color: $grayHeavy;
   font-weight: 700;
 }

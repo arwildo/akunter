@@ -28,7 +28,7 @@ class Sales extends Component {
         const slice = data.reverse().slice(this.state.offset, this.state.offset + this.state.perPage)
         const postData = slice.map(item => <tbody key={item.id}>
             <tr>
-                <td className="px-1 py-3 sm:px-12 border-b border-gray-200 bg-white text-sm">
+                <td className="px-3 py-3 sm:px-12 border-b border-gray-200 bg-white text-sm">
                     <div className="flex items-center">
                         <p className="text-gray-600 whitespace-no-wrap">
                             {this.menus[item.item - 1].split(' ')[0]}
@@ -110,7 +110,7 @@ class Sales extends Component {
                       <thead>
                           <tr>
                               <th
-                                  className="px-2 py-2 sm:px-12 sm:py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                                  className="px-3 py-2 sm:px-12 sm:py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
                                   Item
                               </th>
                               <th
@@ -144,7 +144,7 @@ class Sales extends Component {
                           breakClassName={"break-me"}
                           pageCount={this.state.pageCount}
                           marginPagesDisplayed={1}
-                          pageRangeDisplayed={2}
+                          pageRangeDisplayed={1}
                           onPageChange={this.handlePageClick}
                           containerClassName={"pagination"}
                           subContainerClassName={"pages pagination"}
