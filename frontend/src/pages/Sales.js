@@ -28,16 +28,7 @@ class Sales extends Component {
         const slice = data.reverse().slice(this.state.offset, this.state.offset + this.state.perPage)
         const postData = slice.map(item => <tbody key={item.id}>
             <tr>
-                <td className="px-1 py-3 sm:px-3 border-b border-gray-200 bg-white text-sm">
-                    <div className="flex items-center">
-                        <div className="ml-3">
-                            <p className="text-gray-600 whitespace-no-wrap">
-                                {item.id}
-                            </p>
-                        </div>
-                    </div>
-                </td>
-                <td className="px-1 py-3 sm:px-2 border-b border-gray-200 bg-white text-sm">
+                <td className="px-1 py-3 sm:px-12 border-b border-gray-200 bg-white text-sm">
                     <div className="flex items-center">
                         <p className="text-gray-600 whitespace-no-wrap">
                             {this.menus[item.item - 1].split(' ')[0]}
@@ -110,20 +101,16 @@ class Sales extends Component {
   render() {
     return (
       <div className="antialiased">
-        <div className="container mx-auto px-2 sm:px-8">
+        <div className="container mx-auto sm:px-8">
           <div className="py-0 sm:py-2">
-            <div className="-mx-4 px-2 sm:px-8 py-2 overflow-x-auto">
+            <div className="sm:px-8 py-2 overflow-x-auto">
               <div className="inline-block min-w-full shadow rounded-lg overflow-hidden">
                   <table className="min-w-full leading-normal">
 
                       <thead>
                           <tr>
                               <th
-                                  className="px-4 py-2 sm:px-6 sm:py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
-                                  No
-                              </th>
-                              <th
-                                  className="px-2 py-2 sm:px-2 sm:py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                                  className="px-2 py-2 sm:px-12 sm:py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
                                   Item
                               </th>
                               <th
@@ -156,8 +143,8 @@ class Sales extends Component {
                           breakLabel={"..."}
                           breakClassName={"break-me"}
                           pageCount={this.state.pageCount}
-                          marginPagesDisplayed={2}
-                          pageRangeDisplayed={5}
+                          marginPagesDisplayed={1}
+                          pageRangeDisplayed={2}
                           onPageChange={this.handlePageClick}
                           containerClassName={"pagination"}
                           subContainerClassName={"pages pagination"}
