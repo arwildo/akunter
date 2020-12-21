@@ -41,7 +41,7 @@ class Pay extends Component{
                           <div className="flex flex-row border h-8 w-24 rounded-xl relative">
                               <Link
                                 to="/pay"
-                                className="text-sm bg-gray-300 hover:bg-gray-400 text-gray-800 font-semibold py-2 px-4 rounded-l"
+                                className="text-sm bg-gray-300 hover:bg-gray-400 text-gray-800 font-semibold pt-1 px-4 rounded-l"
                                 onClick={()=>{this.handleSubtractQuantity(item.id)}}
                               >
                                 <span className="m-auto">-</span>
@@ -56,7 +56,7 @@ class Pay extends Component{
 
                               <Link
                                 to="/pay"
-                                className="text-sm bg-gray-300 hover:bg-gray-400 text-gray-800 font-semibold py-2 px-4 rounded-r"
+                                className="text-sm bg-gray-300 hover:bg-gray-400 text-gray-800 font-semibold pt-1 px-4 rounded-r"
                                 onClick={()=>{this.handleAddQuantity(item.id)}}
                               >
                                 <span className="m-auto">+</span>
