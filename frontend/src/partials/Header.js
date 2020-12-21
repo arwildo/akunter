@@ -11,7 +11,7 @@ function Header(props) {
       {location === "/" ?
         <Link to="/" className="flex flex-grow items-center justify-center p-2 text-blue-500 hover:text-blue-500">
           <div className="text-center">
-            <span className="block h-8 text-3xl leading-8">
+            <span className="block h-8 text-2xl sm:text-3xl leading-8">
               <i className="mdi mdi-newspaper-variant-outline"></i>
             </span>
             <span className="block text-xs leading-none">Home</span>
@@ -20,7 +20,7 @@ function Header(props) {
 
         <Link to="/" className="flex flex-grow items-center justify-center p-2 text-gray-500 hover:text-blue-500">
           <div className="text-center">
-            <span className="block h-8 text-3xl leading-8">
+            <span className="block h-8 text-2xl sm:text-3xl leading-8">
               <i className="mdi mdi-newspaper-variant-outline"></i>
             </span>
             <span className="block text-xs leading-none">Home</span>
@@ -30,13 +30,13 @@ function Header(props) {
 
       {location === "/order" ?
         <Link to="/order" className="flex flex-grow items-center justify-center p-2 text-blue-500 hover:text-blue-500">
-          <div className="text-center"> <span className="block h-8 text-3xl leading-8">
+          <div className="text-center"> <span className="block h-8 text-2xl sm:text-3xl leading-8">
               <i className="mdi mdi-cash-register"></i>
             </span>
             <span className="block text-xs leading-none">Order</span>
           </div>
         </Link> : <Link to="/order" className="flex flex-grow items-center justify-center p-2 text-gray-500 hover:text-blue-500">
-          <div className="text-center"> <span className="block h-8 text-3xl leading-8">
+          <div className="text-center"> <span className="block h-8 text-2xl sm:text-3xl leading-8">
               <i className="mdi mdi-cash-register"></i>
             </span>
             <span className="block text-xs leading-none">Order</span>
@@ -46,7 +46,7 @@ function Header(props) {
 
       {location === "/pay" ?
         <Link to="/pay" className="flex flex-grow items-center justify-center p-2 text-blue-500 hover:text-blue-500">
-          <div className="text-center"> <span className="block h-8 text-3xl leading-8">
+          <div className="text-center"> <span className="block h-8 text-2xl sm:text-3xl leading-8">
               <i className="mdi mdi-cart-plus"></i>
               {props.items.length > 0 && 
                 <p
@@ -61,7 +61,7 @@ function Header(props) {
             <span className="block text-xs leading-none">Pay</span>
           </div>
         </Link> : <Link to="/pay" className="flex flex-grow items-center justify-center p-2 text-gray-500 hover:text-blue-500">
-          <div className="text-center"> <span className="block h-8 text-3xl leading-8">
+          <div className="text-center"> <span className="block h-8 text-2xl sm:text-3xl leading-8">
               <i className="mdi mdi-cart-plus"></i>
               {props.items.length > 0 && 
                 <p
@@ -81,14 +81,14 @@ function Header(props) {
       {location === "/sales" ?
         <Link to="/sales" className="flex flex-grow items-center justify-center p-2 text-blue-500 hover:text-blue-500">
           <div className="text-center">
-            <span className="block h-8 text-3xl leading-8">
+            <span className="block h-8 text-2xl sm:text-3xl leading-8">
               <i className="mdi mdi-text-box-check-outline"></i>
             </span>
             <span className="block text-xs leading-none">Sales</span>
           </div>
         </Link> : <Link to="/sales" className="flex flex-grow items-center justify-center p-2 text-gray-500 hover:text-blue-500">
           <div className="text-center">
-            <span className="block h-8 text-3xl leading-8">
+            <span className="block h-8 text-2xl sm:text-3xl leading-8">
               <i className="mdi mdi-text-box-check-outline"></i>
             </span>
             <span className="block text-xs leading-none">Sales</span>
@@ -99,14 +99,14 @@ function Header(props) {
       {location === "/store" ?
         <Link to="/store" className="flex flex-grow items-center justify-center p-2 text-blue-500 hover:text-blue-500">
           <div className="text-center">
-            <span className="block h-8 text-3xl leading-8">
+            <span className="block h-8 text-2xl sm:text-3xl leading-8">
               <i className="mdi mdi-store"></i>
             </span>
             <span className="block text-xs leading-none">Store</span>
           </div>
         </Link> : <Link to="/store" className="flex flex-grow items-center justify-center p-2 text-gray-500 hover:text-blue-500">
           <div className="text-center">
-            <span className="block h-8 text-3xl leading-8">
+            <span className="block h-8 text-2xl sm:text-3xl leading-8">
               <i className="mdi mdi-store"></i>
             </span>
             <span className="block text-xs leading-none">Store</span>
