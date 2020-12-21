@@ -3,11 +3,12 @@ $grayMed: #6B7280;
 $grayHeavy: #374151;
 
 .pagination {
-  margin: 15px auto;
+  margin: 5px auto;
   padding-bottom: 3rem;
   display: flex;
   list-style: none;
   font-weight: 600;
+  font-size: 12px;
   --tw-text-opacity: 1;
   color: rgba(75, 85, 99, var(--tw-text-opacity));
 }
@@ -18,12 +19,12 @@ $grayHeavy: #374151;
   cursor: pointer;
   background-color: $grayLight;
   padding: 0.5rem 0.75rem 0.5rem 0.75rem;
+
   margin-left: 0.25rem;
   margin-right: 0.25rem;
   border-radius: 0.5rem;
 }
 .pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus{
-  background-color: #EFEFEC;
-}
-.pagination > li > a{
+  background-color: #EFEFEF;
+  font-weight: 700;
 }

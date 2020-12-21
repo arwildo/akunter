@@ -42,9 +42,9 @@ class Sales extends Component {
                         <p className="text-gray-600 whitespace-no-wrap">
                             {this.menus[item.item - 1].split(' ')[0]}
                             <br />
-                            <p className="font-semibold">
+                            <span className="font-semibold">
                               {this.menus[item.item - 1].split(' ')[1]}
-                            </p>
+                            </span>
                         </p>
                     </div>
                 </td>
@@ -74,7 +74,9 @@ class Sales extends Component {
                     {/* Last two digit of the year */}
                     {item.time.split(' ')[0].split('-')[2][2]}{item.time.split(' ')[0].split('-')[2][3]}
                     <br />
-                    {item.time.split(' ')[1]}
+                    <span className="font-semibold">
+                      {item.time.split(' ')[1]}
+                    </span>
                   </p>
                 </td>
             </tr>
@@ -143,7 +145,7 @@ class Sales extends Component {
                           </tr>
                       </thead>
 
-                  {this.state.postData}
+                    {this.state.postData}
 
                   </table>
 
