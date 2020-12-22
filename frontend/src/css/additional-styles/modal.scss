@@ -1,0 +1,13 @@
+.succesOrderModal {
+  animation-name: modalopen;
+  animation-duration: 0.5s;
+}
+
+@keyframes modalopen {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

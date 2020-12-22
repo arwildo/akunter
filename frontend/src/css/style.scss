@@ -2,22 +2,17 @@
 
 @tailwind base;
 @tailwind components;
+@tailwind utilities;
 
 // Additional styles
 @import 'additional-styles/paginator.scss';
-
-@tailwind utilities;
+@import 'additional-styles/modal.scss';
 
 // Additional Tailwind directives: https://tailwindcss.com/docs/functions-and-directives/#responsive
 @responsive {
   .rtl {
     direction: rtl;
   }
-}
-
-// See Alpine.js: https://github.com/alpinejs/alpine#x-cloak
-[x-cloak] {
-    display: none;
 }
 
 // AOS styles

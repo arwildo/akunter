@@ -6,6 +6,12 @@ import { removeItem,addQuantity,subtractQuantity} from '../actions/cartActions';
 import Recipe from '../partials/Recipe';
 
 class Pay extends Component{
+  constructor(props) {
+    super();
+    this.state = {
+      modalState: "none"
+    };
+  }
   // Remove the item completely
   handleRemove = (id)=>{
     this.props.removeItem(id);
@@ -17,6 +23,11 @@ class Pay extends Component{
   // Substruct from the quantity
   handleSubtractQuantity = (id)=>{
     this.props.subtractQuantity(id);
+  }
+
+  // Modal
+  openCloseModal = () => {
+    this.setState({ modalState: "block" });
   }
 
   render(){
@@ -87,12 +98,22 @@ class Pay extends Component{
 
       (
         <div className="flex h-screen justify-center items-center">
+
           <div className="text-center text-gray-300">
             <p className="block h-8 text-7xl leading-8 text-center align-middle">
               <i className="mdi mdi-cart-outline"></i>
             </p>
             <p className="block text-sm m-6 leading-none text-center align-middle">Empty</p>
           </div>
+
+          {/* Success order alert modal */}
+          <span className="absolute inline-block px-3 py-1 font-semibold text-green-900 leading-tight succesOrderModal" style={{ display: this.state.modalState }}>
+            <span className="absolute inset-0 bg-green-200 opacity-50 rounded-full"></span>
+            <span className="relative">
+              <i className="mdi mdi-check-circle-outline text-4xl"></i>
+            </span>
+          </span>
+
         </div>
       )
     return(
