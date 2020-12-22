@@ -4,19 +4,32 @@ import { BrowserRouter as Router } from "react-router-dom";
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import * as serviceWorker from './serviceWorker';
+import { Provider as AlertProvider } from 'react-alert';
 
 import App from './App';
 import cartReducer from './reducers/cartReducer';
+
+const AlertTemplate = ({ style, options, message, close }) => (
+  <div style={style}>
+    {options.type === 'info' && '!'}
+    {options.type === 'success' && ':)'}
+    {options.type === 'error' && ':('}
+    {message}
+    <button onClick={close}>X</button>
+  </div>
+)
 
 const store = createStore(cartReducer);
 
 ReactDOM.render(
   <React.StrictMode>
-    <Provider store={store}>
-      <Router>
-        <App />
-      </Router>
-    </Provider>
+    <AlertProvider template={AlertTemplate}>
+      <Provider store={store}>
+        <Router>
+          <App />
+        </Router>
+      </Provider>
+    </AlertProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
