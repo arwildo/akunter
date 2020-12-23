@@ -30,7 +30,7 @@ function Recipe(props) {
 
   const runSaveData = (total) => {
     props.addedItems.map(saveData);
-    alert.success('$' + total +'K');
+    alert.success('$ ' + total +'K');
   }
 
   return(
