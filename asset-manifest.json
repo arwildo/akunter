@@ -1,29 +1,29 @@
 {
   "files": {
-    "main.css": "/static/css/main.35b7494d.chunk.css",
-    "main.js": "/static/js/main.03f6bdb7.chunk.js",
-    "main.js.map": "/static/js/main.03f6bdb7.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.6b6a2202.js",
-    "runtime-main.js.map": "/static/js/runtime-main.6b6a2202.js.map",
-    "static/js/2.b082387c.chunk.js": "/static/js/2.b082387c.chunk.js",
-    "static/js/2.b082387c.chunk.js.map": "/static/js/2.b082387c.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.90050951e9ec61a66942efda46dbb321.js": "/precache-manifest.90050951e9ec61a66942efda46dbb321.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/main.35b7494d.chunk.css.map": "/static/css/main.35b7494d.chunk.css.map",
-    "static/js/2.b082387c.chunk.js.LICENSE.txt": "/static/js/2.b082387c.chunk.js.LICENSE.txt",
-    "static/media/beef-chicken-deluxe.png": "/static/media/beef-chicken-deluxe.6243de05.png",
-    "static/media/beef-chicken-original.png": "/static/media/beef-chicken-original.fdf5c831.png",
-    "static/media/beef-madness.png": "/static/media/beef-madness.8ceb548e.png",
-    "static/media/cashier.jpg": "/static/media/cashier.1511c00d.jpg",
-    "static/media/chicken-crispy.png": "/static/media/chicken-crispy.a46bc6ed.png",
-    "static/media/sales.jpg": "/static/media/sales.7b6b03d8.jpg",
-    "static/media/store.jpg": "/static/media/store.74504c1c.jpg"
+    "main.css": "/build/static/css/main.35b7494d.chunk.css",
+    "main.js": "/build/static/js/main.fc754226.chunk.js",
+    "main.js.map": "/build/static/js/main.fc754226.chunk.js.map",
+    "runtime-main.js": "/build/static/js/runtime-main.4406e232.js",
+    "runtime-main.js.map": "/build/static/js/runtime-main.4406e232.js.map",
+    "static/js/2.b082387c.chunk.js": "/build/static/js/2.b082387c.chunk.js",
+    "static/js/2.b082387c.chunk.js.map": "/build/static/js/2.b082387c.chunk.js.map",
+    "index.html": "/build/index.html",
+    "precache-manifest.dda34428d8475c03a8782a319804a1ba.js": "/build/precache-manifest.dda34428d8475c03a8782a319804a1ba.js",
+    "service-worker.js": "/build/service-worker.js",
+    "static/css/main.35b7494d.chunk.css.map": "/build/static/css/main.35b7494d.chunk.css.map",
+    "static/js/2.b082387c.chunk.js.LICENSE.txt": "/build/static/js/2.b082387c.chunk.js.LICENSE.txt",
+    "static/media/beef-chicken-deluxe.png": "/build/static/media/beef-chicken-deluxe.6243de05.png",
+    "static/media/beef-chicken-original.png": "/build/static/media/beef-chicken-original.fdf5c831.png",
+    "static/media/beef-madness.png": "/build/static/media/beef-madness.8ceb548e.png",
+    "static/media/cashier.jpg": "/build/static/media/cashier.1511c00d.jpg",
+    "static/media/chicken-crispy.png": "/build/static/media/chicken-crispy.a46bc6ed.png",
+    "static/media/sales.jpg": "/build/static/media/sales.7b6b03d8.jpg",
+    "static/media/store.jpg": "/build/static/media/store.74504c1c.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.6b6a2202.js",
+    "static/js/runtime-main.4406e232.js",
     "static/js/2.b082387c.chunk.js",
     "static/css/main.35b7494d.chunk.css",
-    "static/js/main.03f6bdb7.chunk.js"
+    "static/js/main.fc754226.chunk.js"
   ]
 }
