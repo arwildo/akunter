@@ -2,6 +2,12 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import { Chart, LineAdvance } from 'bizcharts';
 
+import DEMO_DATA from './db.json';
+
+
+const DEMO_MODE = true;
+
+
 class Store extends Component {
   constructor(props) {
     super(props);
@@ -26,8 +32,14 @@ class Store extends Component {
   }
 
   async refreshList() {
-    const response = await axios.get("/api/akunters/");
-    this.setState({ dataFetch: response.data });
+    if (DEMO_MODE) {
+      const response = await DEMO_DATA;
+      this.setState({ dataFetch: response });
+    }
+    else {
+      const response = await axios.get("/api/akunters/");
+      this.setState({ dataFetch: response.data });
+    }
 
     this.getIncomes();
     this.plotData();
