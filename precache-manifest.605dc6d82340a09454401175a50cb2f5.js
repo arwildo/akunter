@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d1266f00f1f6f08f425186319b603946",
+    "revision": "d78fddefc9d2a58c69277e6d01d8b80a",
     "url": "/akunter/index.html"
   },
   {
-    "revision": "c545bf5edb2551a87d9b",
+    "revision": "1f10dcb6f82b34b5713b",
     "url": "/akunter/static/css/main.35b7494d.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/akunter/static/js/2.b082387c.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "c545bf5edb2551a87d9b",
-    "url": "/akunter/static/js/main.d7dc8dec.chunk.js"
+    "revision": "1f10dcb6f82b34b5713b",
+    "url": "/akunter/static/js/main.135f30a7.chunk.js"
   },
   {
     "revision": "910710dd862e19fe4379",
