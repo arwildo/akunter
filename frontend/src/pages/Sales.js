@@ -8,6 +8,18 @@ import DEMO_DATA from './db.json';
 const DEMO_MODE = true;
 
 
+// Process the DEMO_DATA to follow the last 30 date
+let NEW_DEMO_DATA = []
+
+const changeDate = (data) => {
+  for (let i in DEMO_DATA) {
+    console.log(DEMO_DATA[i].time);
+  }
+}
+
+changeDate();
+
+
 class Sales extends Component {
   constructor(props) {
     super(props);
@@ -29,7 +41,7 @@ class Sales extends Component {
   receivedData() {
     if (DEMO_MODE) {
       const data = DEMO_DATA;
-      const slice = data.reverse().slice(this.state.offset, this.state.offset + this.state.perPage)
+      const slice = data.slice(this.state.offset, this.state.offset + this.state.perPage)
       const postData = slice.map(item => <tbody key={item.id}>
           <tr>
               <td className="px-3 py-3 sm:px-12 border-b border-gray-200 bg-white text-sm">
