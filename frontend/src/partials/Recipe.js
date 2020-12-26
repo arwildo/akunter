@@ -25,7 +25,7 @@ function Recipe(props) {
                   [d.getHours(),
                   d.getMinutes()].join(':');
 
-      let activeData = `item: ${data.id} quantity: ${data.quantity} time: ${dformat}`;
+      let activeData = `item: ${data.id}, quantity: ${data.quantity}, time: ${dformat}`;
       alert.info(activeData);
       handleRemove(data.id);
     }

@@ -23,11 +23,11 @@ const AlertTemplate = ({ style, options, message, close }) => (
           <div className="flex items-center">
             <h2 className="text-gray-500 text-sm">{message}</h2>
           </div>
-          <button className="flex justify-end flex-1" onClick={close}>
+          <div className="flex justify-end flex-1 cursor-pointer" onClick={close}>
             <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
             </svg>
-          </button>
+          </div>
         </div>
       </section>
     }
@@ -43,11 +43,11 @@ const AlertTemplate = ({ style, options, message, close }) => (
           <div className="flex items-center">
             <h2 className="text-gray-500 text-sm">{message}</h2>
           </div>
-          <button className="flex justify-end flex-1" onClick={close}>
+          <div className="flex justify-end flex-1 cursor-pointer" onClick={close}>
             <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
             </svg>
-          </button>
+          </div>
         </div>
       </section>
     }
@@ -63,11 +63,11 @@ const AlertTemplate = ({ style, options, message, close }) => (
           <div className="flex items-center">
             <h2 className="text-gray-500 text-sm">{message}</h2>
           </div>
-          <button className="flex justify-end flex-1" onClick={close}>
+          <div className="flex justify-end flex-1 cursor-pointer" onClick={close}>
             <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
             </svg>
-          </button>
+          </div>
         </div>
       </section>
     }
