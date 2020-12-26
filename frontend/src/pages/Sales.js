@@ -8,18 +8,6 @@ import DEMO_DATA from './db.json';
 const DEMO_MODE = true;
 
 
-// Process the DEMO_DATA to follow the last 30 date
-let NEW_DEMO_DATA = []
-
-const changeDate = (data) => {
-  for (let i in DEMO_DATA) {
-    console.log(DEMO_DATA[i].time);
-  }
-}
-
-changeDate();
-
-
 class Sales extends Component {
   constructor(props) {
     super(props);
