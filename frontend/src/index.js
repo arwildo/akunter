@@ -88,7 +88,7 @@ const store = createStore(cartReducer);
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <AlertProvider template={AlertTemplate} {...options}>
           <App />
         </AlertProvider>
