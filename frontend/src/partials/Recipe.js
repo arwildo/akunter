@@ -5,32 +5,49 @@ import { useAlert } from 'react-alert';
 
 import { removeItem } from '../actions/cartActions';
 
+
+const DEMO_MODE = true;
+
+
 function Recipe(props) {
+  const alert = useAlert();
   // Remove the item completely
   const handleRemove = (id) => {
     props.removeItem(id);
   }
 
   const saveData = (data) => {
-    const d = new Date(),
-      dformat = [d.getDate(),
-                d.getMonth()+1,
-                d.getFullYear()].join('-')+' '+
-                [d.getHours(),
-                d.getMinutes()].join(':');
+    if (DEMO_MODE) {
+      const d = new Date(),
+        dformat = [d.getDate(),
+                  d.getMonth()+1,
+                  d.getFullYear()].join('-')+' '+
+                  [d.getHours(),
+                  d.getMinutes()].join(':');
 
-    let activeData = {item: data.id, quantity: data.quantity, time: dformat}
+      let activeData = `item: ${data.id} quantity: ${data.quantity} time: ${dformat}`;
+      alert.info(activeData);
+      handleRemove(data.id);
+    }
+    else {
+      const d = new Date(),
+        dformat = [d.getDate(),
+                  d.getMonth()+1,
+                  d.getFullYear()].join('-')+' '+
+                  [d.getHours(),
+                  d.getMinutes()].join(':');
 
-    axios
-      .post("/api/akunters/", activeData);
-    handleRemove(data.id);
+      let activeData = {item: data.id, quantity: data.quantity, time: dformat}
+
+      axios
+        .post("/api/akunters/", activeData);
+      handleRemove(data.id);
+    }
   }
-
-  const alert = useAlert();
 
   const runSaveData = (total) => {
     props.addedItems.map(saveData);
-    alert.success('$ ' + total +'K');
+    alert.success('Success  $ ' + total +'K');
   }
 
   return(
