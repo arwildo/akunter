@@ -47,6 +47,9 @@ function Recipe(props) {
 
   const runSaveData = (total) => {
     props.addedItems.map(saveData);
+    if (DEMO_MODE) {
+      alert.info("Item data will be saved in the database if DEMO_MODE == false");
+    }
     alert.success('Success  $ ' + total +'K');
   }
 
