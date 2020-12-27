@@ -11,6 +11,7 @@ const DEMO_MODE = true;
 // Process the DEMO_DATA to follow the last 30 date
 // TODO: Make data date follow the last 30 day, random every order on every date
 let dateCountDown = 0;
+
 const demoDataDate = new Date(),
   demoDataTime = [demoDataDate.getDate(),
             demoDataDate.getMonth()+1,
@@ -108,6 +109,7 @@ class Store extends Component {
       clean = clean.join("-");
       dates.push(clean);
     }
+    console.log(dates);
 
     // Get date that has sale
     let dateThatHasData = []
