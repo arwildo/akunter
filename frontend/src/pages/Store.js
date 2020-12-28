@@ -8,26 +8,6 @@ import DEMO_DATA from './db.json';
 const DEMO_MODE = true;
 
 
-// Process the DEMO_DATA to follow the last 30 date
-// TODO: Make data date follow the last 30 day, random every order on every date
-let dateCountDown = 0;
-
-const demoDataDate = new Date(),
-  demoDataTime = [demoDataDate.getDate(),
-            demoDataDate.getMonth()+1,
-            demoDataDate.getFullYear()].join('-')+' '+
-            [demoDataDate.getHours(),
-            demoDataDate.getMinutes()].join(':');
-
-const changeDate = (data) => {
-  for (let i in DEMO_DATA) {
-    DEMO_DATA[i].time = demoDataTime;
-    console.log(DEMO_DATA[i]);
-  }
-}
-changeDate();
-
-
 class Store extends Component {
   constructor(props) {
     super(props);

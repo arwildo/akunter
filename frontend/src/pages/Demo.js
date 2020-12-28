@@ -1,3 +1,11 @@
-import DEMO_DATA from './db.json';
+import db from './db.json';
 
-export default DEMO_DATA;
+const demoData = () => {
+  for (let i in db) {
+    console.log(db[i].time);
+  }
+
+  return db;
+}
+
+export default demoData;
