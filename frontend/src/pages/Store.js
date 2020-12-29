@@ -89,7 +89,6 @@ class Store extends Component {
       clean = clean.join("-");
       dates.push(clean);
     }
-    console.log(dates);
 
     // Get date that has sale
     let dateThatHasData = []
