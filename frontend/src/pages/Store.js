@@ -3,6 +3,9 @@ import axios from 'axios';
 import { Chart, LineAdvance } from 'bizcharts';
 
 import DEMO_DATA from './db.json';
+import Demo from './Demo';
+
+console.log(Demo());
 
 
 const DEMO_MODE = true;
