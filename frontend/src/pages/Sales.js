@@ -28,7 +28,7 @@ class Sales extends Component {
 
   receivedData() {
     if (DEMO_MODE) {
-      const data = demoDataSales();
+      const data = demoDataSales;
       const slice = data.reverse().slice(this.state.offset, this.state.offset + this.state.perPage);
       const postData = slice.map(item => <tbody key={item.id}>
           <tr>
