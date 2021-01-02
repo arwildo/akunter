@@ -3,7 +3,7 @@ import axios from 'axios';
 import { Chart, LineAdvance } from 'bizcharts';
 
 // Serverless Demo
-import demoDataStore from './Demo';
+import demoData from './Demo';
 const DEMO_MODE = true;
 
 
@@ -32,7 +32,7 @@ class Store extends Component {
 
   async refreshList() {
     if (DEMO_MODE) {
-      const response = await demoDataStore;
+      const response = await demoData;
       this.setState({ dataFetch: response });
     }
     else {
