@@ -1,4 +1,4 @@
-$grayLight: #E5E7EB;
+$grayLight: #F3F4F6;
 $grayMed: #6B7280;
 $grayHeavy: #374151;
 
@@ -25,7 +25,7 @@ $grayHeavy: #374151;
   border-radius: 0.5rem;
 }
 .pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus{
-  background-color: #EFEFEF;
-  color: $grayHeavy;
+  background-color: #EFF6FF;
+  color: #1E3A8A;
   font-weight: 700;
 }

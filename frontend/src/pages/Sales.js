@@ -2,9 +2,8 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import ReactPaginate from 'react-paginate';
 
-import demoDataSales from './Demo';
-
-
+// Serverless Demo
+import demoData from './Demo';
 const DEMO_MODE = true;
 
 
@@ -28,8 +27,8 @@ class Sales extends Component {
 
   receivedData() {
     if (DEMO_MODE) {
-      const data = demoDataSales;
-      const slice = data.reverse().slice(this.state.offset, this.state.offset + this.state.perPage);
+      const data = demoData;
+      const slice = data.slice(this.state.offset, this.state.offset + this.state.perPage);
       const postData = slice.map(item => <tbody key={item.id}>
           <tr>
               <td className="px-3 py-3 sm:px-12 border-b border-gray-200 bg-white text-sm">

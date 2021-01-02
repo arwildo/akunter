@@ -15,7 +15,6 @@
     "axios": "^0.21.0",
     "bizcharts": "^4.0.16",
     "cruip-js-toolkit": "^1.0.2",
-    "mocker-data-generator": "^2.10.0",
     "node-sass": "^4.14.1",
     "postcss": "^7.0.35",
     "postcss-cli": "^7.1.2",
