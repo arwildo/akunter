@@ -15,8 +15,8 @@ let timeArr = ["15:13", "15:45", "16:24", "17:41", "18:9", "20:18", "21:56"];
 timeArr = arrMult(timeArr, 15);
 
 
-// Get all the last30days's days
-for (let day=94; day>1; day--) {
+// Get all the last15days's days
+for (let day=15; day>1; day--) {
   last30Days = new Date(dateNow - day * 24 * 60 * 60 * 1000).toISOString();
   let clean = last30Days.split(":")[0];
   clean = clean.split("T")[0];
@@ -36,7 +36,5 @@ for (let i=0; i<93; i++) {
 
   demoData.push(itemData);
 }
-
-console.log(demoData);
 
 export default demoData;
