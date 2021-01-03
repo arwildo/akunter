@@ -71,18 +71,18 @@ class Store extends Component {
   };
 
 
-  // Plot data to graph for daily income for the last 30 days
+  // Plot data to graph for daily income for the last 14 days
   plotData = () => {
 
     // Vars
-    let last30Days;
+    let last14Days;
     let dates = []
     let dateNow = new Date(Date.now() + (3600 * 1000 * 24 * 2));
 
     // Get all the days
-    for (let day=31; day>1; day--) {
-      last30Days = new Date(dateNow - day * 24 * 60 * 60 * 1000).toISOString();
-      let clean = last30Days.split(":")[0];
+    for (let day=15; day>1; day--) {
+      last14Days = new Date(dateNow - day * 24 * 60 * 60 * 1000).toISOString();
+      let clean = last14Days.split(":")[0];
       clean = clean.split("T")[0];
       clean = clean.split("-").reverse();
       clean = clean.join("-");
@@ -91,7 +91,7 @@ class Store extends Component {
 
     // Get date that has sale
     let dateThatHasData = []
-    const get30DayData = (i) => {
+    const get14DaysData = (i) => {
       let timeDate = i.time.split(" ")[0];
 
       dates.forEach(function (value) {
@@ -102,14 +102,14 @@ class Store extends Component {
 
     };
 
-    this.state.dataFetch.map(get30DayData);
+    this.state.dataFetch.map(get14DaysData);
     dateThatHasData = [...new Set(dateThatHasData)];
 
     // Calculate the incomes
-    let all30DaysSum = [];
+    let all14DaysSum = [];
     let prices = this.state.prices
 
-    const calculate30daysSum = (date) => {
+    const calc7DaysSum = (date) => {
       let todaySum = 0;
 
       this.state.dataFetch.map(function (i) {
@@ -119,11 +119,11 @@ class Store extends Component {
         }
         return todaySum;
       });
-      all30DaysSum.push({Date: date.split("-")[0], Income: todaySum});
+      all14DaysSum.push({Date: date.split("-")[0], Income: todaySum});
     };
 
-    dateThatHasData.map(calculate30daysSum);
-    this.setState({ dataPlot: all30DaysSum });
+    dateThatHasData.map(calc7DaysSum);
+    this.setState({ dataPlot: all14DaysSum });
   };
 
   render() {
@@ -158,7 +158,7 @@ class Store extends Component {
 
             <div className="col-span-12 sm:col-span-6">
               <div className="top-0 right-0 mr-3 w-28 py-4 px-2">
-                <div className="rounded-full bg-blue-500 text-white text-xs py-1 pl-3 pr-3 leading-none"><i className="mdi mdi-chart-box-outline text-base align-middle"></i> <span className="align-middle">30 Days</span></div>
+                <div className="rounded-full bg-blue-500 text-white text-xs py-1 pl-3 pr-3 leading-none"><i className="mdi mdi-chart-box-outline text-base align-middle"></i> <span className="align-middle">14 Days</span></div>
               </div>
               <div className="flex flex-row bg-white shadow-md rounded p-4">
                 <div className="rounded overflow-hidden w-full md:flex">
