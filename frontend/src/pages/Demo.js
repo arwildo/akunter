@@ -1,8 +1,8 @@
-const numArr = [1, 2, 3, 4, 5, 6];
 let last30Days;
 let dates = []
 let demoData = [];
 let dateNow = new Date(Date.now() + (3600 * 1000 * 24 * 2));
+const numArr = [1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 4, 4, 5, 6];
 
 // Repeat array
 const arrMult = (arr, n) => {
