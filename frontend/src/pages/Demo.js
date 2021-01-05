@@ -23,8 +23,8 @@ for (let day=15; day>1; day--) {
   clean = clean.split("-").reverse();
 
   // Convert date and month number to Int (01 -> 1)
-  clean[0] = parseInt(clean[0])
-  clean[1] = parseInt(clean[1])
+  clean[0] = parseInt(clean[0], 10)
+  clean[1] = parseInt(clean[1], 10)
 
   // Combine back the data
   clean = clean.join("-");
