@@ -54,6 +54,7 @@ class Store extends Component {
       let timeData = i.time.split(" ")[0];
       let timeMonth = timeData.split("-")[1] + "-" + timeData.split("-")[2];
 
+      console.log(this.dformat + "    " + timeData);
       if (this.dformat === timeData) {
         let thisDay = this.state.prices[i.item-1] * i.quantity;
         todaySum += thisDay;

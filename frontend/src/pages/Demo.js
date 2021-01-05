@@ -21,12 +21,18 @@ for (let day=15; day>1; day--) {
   let clean = last30Days.split(":")[0];
   clean = clean.split("T")[0];
   clean = clean.split("-").reverse();
+
+  // Convert date and month number to Int (01 -> 1)
+  clean[0] = parseInt(clean[0])
+  clean[1] = parseInt(clean[1])
+
+  // Combine back the data
   clean = clean.join("-");
   dates.push(clean);
 }
 
 // Main
-for (let i=0; i<93; i++) {
+for (let i=0; i<14; i++) {
   let itemData = {}
 
   itemData.id = i;
