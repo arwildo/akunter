@@ -2,7 +2,7 @@ let last30Days;
 let dates = []
 let demoData = [];
 let dateNow = new Date(Date.now() + (3600 * 1000 * 24 * 2));
-const numArr = [1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 4, 4, 5, 6];
+const numArr = [1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 4, 4, 5, 6];
 
 // Repeat array
 const arrMult = (arr, n) => {
@@ -16,7 +16,7 @@ timeArr = arrMult(timeArr, 15);
 
 
 // Get all the last15days's days
-for (let day=15; day>1; day--) {
+for (let day=33; day>1; day--) {
   last30Days = new Date(dateNow - day * 24 * 60 * 60 * 1000).toISOString();
   let clean = last30Days.split(":")[0];
   clean = clean.split("T")[0];
@@ -32,7 +32,7 @@ for (let day=15; day>1; day--) {
 }
 
 // Main
-for (let i=0; i<14; i++) {
+for (let i=0; i<32; i++) {
   let itemData = {}
 
   itemData.id = i;
