@@ -1,3 +1,5 @@
+// Serverless mode
+const demoMode = true;
 let last30Days;
 let dates = []
 let demoData = [];
@@ -43,4 +45,7 @@ for (let i=0; i<32; i++) {
   demoData.push(itemData);
 }
 
-export default demoData;
+export {
+  demoMode,
+  demoData
+}

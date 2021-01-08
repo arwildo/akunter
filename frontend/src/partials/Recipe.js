@@ -5,8 +5,8 @@ import { useAlert } from 'react-alert';
 
 import { removeItem } from '../actions/cartActions';
 
-
-const DEMO_MODE = true;
+// Serverless Demo
+const DEMO_MODE = false;
 
 
 function Recipe(props) {

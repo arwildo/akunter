@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { Chart, LineAdvance } from 'bizcharts';
-
-// Serverless Demo
-import demoData from './Demo';
-const DEMO_MODE = true;
+import { demoMode as DEMO_MODE, demoData } from '../Demo';
 
 
 class Store extends Component {
@@ -36,7 +33,6 @@ class Store extends Component {
       this.setState({ dataFetch: response });
     }
     else {
-      console.log("test");
       const response = await axios.get("/api/akunters/");
       this.setState({ dataFetch: response.data });
     }
@@ -55,7 +51,7 @@ class Store extends Component {
       let timeData = i.time.split(" ")[0];
       let timeMonth = timeData.split("-")[1] + "-" + timeData.split("-")[2];
 
-      if (this.dformat == timeData) {
+      if (this.dformat === timeData) {
         let thisDay = this.state.prices[i.item-1] * i.quantity;
         todaySum += thisDay;
       }

@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import ReactPaginate from 'react-paginate';
-
-// Serverless Demo
-import demoData from './Demo';
-const DEMO_MODE = true;
+import { demoMode as DEMO_MODE, demoData } from '../Demo';
 
 
 class Sales extends Component {
