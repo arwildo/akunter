@@ -4,9 +4,7 @@ import axios from 'axios';
 import { useAlert } from 'react-alert';
 
 import { removeItem } from '../actions/cartActions';
-
-// Serverless Demo
-const DEMO_MODE = false;
+import { demoMode as DEMO_MODE } from '../Demo';
 
 
 function Recipe(props) {

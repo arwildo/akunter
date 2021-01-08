@@ -1,5 +1,6 @@
 // Serverless mode
 const demoMode = true;
+
 let last30Days;
 let dates = []
 let demoData = [];

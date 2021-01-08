@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { Chart, LineAdvance } from 'bizcharts';
+
 import { demoMode as DEMO_MODE, demoData } from '../Demo';
 
 
