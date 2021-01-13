@@ -3,6 +3,7 @@ import axios from 'axios';
 import { Chart, LineAdvance } from 'bizcharts';
 
 import { demoMode as DEMO_MODE, demoData } from '../Demo';
+import ItemChart from '../partials/ItemChart';
 
 
 class Store extends Component {
@@ -179,6 +180,8 @@ class Store extends Component {
                 </div>
               </div>
             </div>
+
+            <ItemChart />
 
           </div>
         </div>
