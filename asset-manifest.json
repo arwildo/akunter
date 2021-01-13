@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/akunter/static/css/main.ea7fc07e.chunk.css",
-    "main.js": "/akunter/static/js/main.3e91f098.chunk.js",
-    "main.js.map": "/akunter/static/js/main.3e91f098.chunk.js.map",
+    "main.js": "/akunter/static/js/main.975fe056.chunk.js",
+    "main.js.map": "/akunter/static/js/main.975fe056.chunk.js.map",
     "runtime-main.js": "/akunter/static/js/runtime-main.75da1dbe.js",
     "runtime-main.js.map": "/akunter/static/js/runtime-main.75da1dbe.js.map",
     "static/js/2.330d3eff.chunk.js": "/akunter/static/js/2.330d3eff.chunk.js",
     "static/js/2.330d3eff.chunk.js.map": "/akunter/static/js/2.330d3eff.chunk.js.map",
     "index.html": "/akunter/index.html",
-    "precache-manifest.4267039957c3ee6685a477db2275faca.js": "/akunter/precache-manifest.4267039957c3ee6685a477db2275faca.js",
+    "precache-manifest.bb2cb88c98f8bd263ec9f7279625a8d8.js": "/akunter/precache-manifest.bb2cb88c98f8bd263ec9f7279625a8d8.js",
     "service-worker.js": "/akunter/service-worker.js",
     "static/css/main.ea7fc07e.chunk.css.map": "/akunter/static/css/main.ea7fc07e.chunk.css.map",
     "static/js/2.330d3eff.chunk.js.LICENSE.txt": "/akunter/static/js/2.330d3eff.chunk.js.LICENSE.txt",
@@ -24,6 +24,6 @@
     "static/js/runtime-main.75da1dbe.js",
     "static/js/2.330d3eff.chunk.js",
     "static/css/main.ea7fc07e.chunk.css",
-    "static/js/main.3e91f098.chunk.js"
+    "static/js/main.975fe056.chunk.js"
   ]
 }
