@@ -1,18 +1,62 @@
 import React from 'react';
+import {
+	Chart,
+	Interval,
+	Tooltip,
+	Axis,
+	Coordinate,
+	Interaction,
+	getTheme
+} from 'bizcharts';
+
 
 function ItemChart() {
+	const data = [
+		{ item: 'Chicken Crispy', count: 40, percent: 0.4 },
+		{ item: 'Chicken Deluxe', count: 21, percent: 0.21 },
+		{ item: 'Beef Cheese', count: 17, percent: 0.17 },
+		{ item: 'Beef Deluxe', count: 13, percent: 0.13 },
+		{ item: 'Chicken Original', count: 9, percent: 0.09 },
+	];
+
+	const cols = {
+		percent: {
+			formatter: val => {
+				val = val * 100 + '%';
+				return val;
+			},
+		},
+	};
+
   return (
-    <div className="col-span-6">
-      <div className="flex flex-row bg-white shadow-sm rounded p-4">
-        <div className="flex items-center justify-center flex-shrink-0 h-8 w-8 md:h-12 md:w-12 rounded-xl bg-green-100 text-green-500">
-          <i className="mdi mdi-white-balance-sunny align-middle text-lg md:text-2xl"></i>
-        </div>
-        <div className="flex flex-col flex-grow ml-4">
-          <div className="text-xs md:text-sm text-gray-500">Today</div>
-          <div className="font-bold text-md md:text-lg">$ 432K</div>
-        </div>
-      </div>
-    </div>
+		<Chart height={300} data={data} scale={cols} autoFit>
+			<Coordinate type="theta" radius={0.75} />
+			<Tooltip showTitle={false} />
+			<Axis visible={false} />
+			<Interval
+				position="percent"
+				adjust="stack"
+				color="item"
+				style={{
+					lineWidth: 1,
+					stroke: '#fff',
+				}}
+				label={['count', {
+					content: (data) => {
+						return `${data.item}: ${data.percent * 100}%`;
+					},
+				}]}
+				state={{
+					selected: {
+						style: (t) => {
+							const res = getTheme().geometries.interval.rect.selected.style(t);
+							return { ...res, fill: 'red' }
+						}
+					}
+				}}
+			/>
+			<Interaction type='element-single-selected' />
+		</Chart>
   );
 }
 

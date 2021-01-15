@@ -135,7 +135,7 @@ class Store extends Component {
     return (
       <div className="flex max-w-5xl mx-auto items-center min-h-screen text-gray-800">
         <div className="p-1 w-full">
-          <div className="grid grid-cols-12 gap-4">
+          <div className="grid grid-cols-12 gap-4 mb-24 md:mb-0">
 
             <div className="col-span-6">
               <div className="flex flex-row bg-white shadow-sm rounded p-4">
@@ -181,7 +181,18 @@ class Store extends Component {
               </div>
             </div>
 
-            <ItemChart />
+            <div className="col-span-12 sm:col-span-6">
+              <div className="top-0 right-0 mr-3 w-28 py-4 px-2">
+                <div className="rounded-full bg-blue-500 text-white text-xs py-1 pl-3 pr-3 leading-none"><i className="mdi mdi-chart-donut text-base align-middle"></i> <span className="align-middle">14 Days</span></div>
+              </div>
+              <div className="flex flex-row bg-white shadow-md rounded p-4">
+                <div className="rounded overflow-hidden w-full md:flex">
+                  <div className="flex w-full bg-white items-center">
+                    <ItemChart />
+                  </div>
+                </div>
+              </div>
+            </div>
 
           </div>
         </div>
