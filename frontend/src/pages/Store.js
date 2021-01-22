@@ -135,7 +135,7 @@ class Store extends Component {
     return (
       <div className="flex max-w-5xl mx-auto items-center min-h-screen text-gray-800">
         <div className="p-1 w-full">
-          <div className="grid grid-cols-12 gap-4 mb-24 md:mb-0">
+          <div className="grid grid-cols-12 gap-4 mb-24 mt-4 md:mb-0">
 
             <div className="col-span-6">
               <div className="flex flex-row bg-white shadow-sm rounded p-4">
