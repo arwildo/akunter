@@ -1,35 +1,60 @@
 import React from "react";
 import { Chart, registerShape, Axis, Tooltip, Interval, Interaction, Coordinate } from "bizcharts";
 
-    
-
 const ItemChart = (params) => {
   const dataFetch = params.dataFetch;
+  const dataType = ["CC", "CO", "CD", "BD", "BO", "BM"];
+
+  // ItemType and ItemValue
+  let CCValue, COValue, CDValue, BDValue, BOValue, BMValue
+  CCValue = COValue = CDValue = BDValue = BOValue = BMValue = 0;
+
+  // Get type and value of data
+  for (let i in dataFetch) {
+    if (dataType[dataFetch[i].item-1] === "CC") {
+      CCValue += dataFetch[i].quantity;
+    }
+    else if (dataType[dataFetch[i].item-1] === "CO") {
+      COValue += dataFetch[i].quantity;
+    }
+    else if (dataType[dataFetch[i].item-1] === "CD") {
+      CDValue += dataFetch[i].quantity;
+    }
+    else if (dataType[dataFetch[i].item-1] === "BD") {
+      BDValue += dataFetch[i].quantity;
+    }
+    else if (dataType[dataFetch[i].item-1] === "BO") {
+      BOValue += dataFetch[i].quantity;
+    }
+    else if (dataType[dataFetch[i].item-1] === "BM") {
+      BMValue += dataFetch[i].quantity;
+    }
+  }
 
   let data = [
     {
       type: "CC",
-      value: 27,
+      value: CCValue,
     },
     {
       type: "CO",
-      value: 25,
+      value: COValue,
     },
     {
       type: "CD",
-      value: 5,
+      value: CDValue,
     },
     {
       type: "BD",
-      value: 18,
+      value: BDValue,
     },
     {
       type: "BO",
-      value: 15,
+      value: BOValue,
     },
     {
       type: "BM",
-      value: 10,
+      value: BMValue,
     }
   ];
 
