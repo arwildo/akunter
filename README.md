@@ -1,4 +1,4 @@
-<p align=center><a href="https://arwildo.com/akunter/"><img src="https://raw.githubusercontent.com/arwildo/akunter/master/frontend/src/images/akunter-logo.png" width="64"></img></a><h1 align="center">Akunter</h1></p> 
+<p align=center><a href="https://arwildo.com/akunter/"><img src="https://raw.githubusercontent.com/arwildo/akunter/master/frontend/src/images/akunter-logo.png" width="64"></img></a><h2 align="center">Akunter</h2></p> 
 <p align=center> 
   <img src="https://raw.githubusercontent.com/arwildo/akunter/master/frontend/src/images/akunter.png" width="800">
 </p>
