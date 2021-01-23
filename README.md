@@ -1,4 +1,9 @@
-<p align=center><a href="https://arwildo.com/akunter/"><img src="https://arwildo.com/akunter/logo.ico" width="32"></img></a></p> 
+<p align=center>
+  <a href="https://arwildo.com/akunter/">
+    <img src="https://arwildo.com/akunter/logo.ico" width="32"></img>
+  </a>
+  <h1 align="center">Akunter</h1>
+</p> 
 <p align=center> 
   <img src="https://raw.githubusercontent.com/arwildo/akunter/master/frontend/src/images/akunter.png" width="800">
 </p>
