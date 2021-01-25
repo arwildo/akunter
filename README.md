@@ -10,7 +10,7 @@
 Full-stack DRRM (Django, React, Redux, MySQL) application to handle accounting and databases of small businesses. 
 </p>
 
-## Built With
+### Built With
 
 * [React](https://reactjs.org/) - The JavaScript framework
 * [Reduc](https://redux.js.org/) - State Management
@@ -19,14 +19,14 @@ Full-stack DRRM (Django, React, Redux, MySQL) application to handle accounting a
 * [Sass](https://sass-lang.com/) - CSS Pre-Processor
 * [Tailwind](https://tailwindcss.com/) - CSS framework
 
-## Requirements
+### Requirements
 * [NPM](https://www.npmjs.com/) - Node Package Manager
 * [Python3](https://reactjs.org/) - Programming Language
 
 
-## Installing
+### Installing
 
-### Frontend
+#### Frontend
 
 1. Clone the repo
 
@@ -46,7 +46,7 @@ npm install
 npm run start
 ```
 
-### Backend
+#### Backend
 
 5. Navigate to `backend` directory
 
@@ -63,11 +63,11 @@ python manage.py runserver
 ```
 
 
-## License
+### License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
 
-## Support
+### Support
 
 <a href="https://www.buymeacoffee.com/Arwildo " target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/white_img.png" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;" ></a>
