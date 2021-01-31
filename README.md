@@ -10,7 +10,6 @@
 Full-stack DRRM (Django, React, Redux, MySQL) application to handle accounting and databases of small businesses. 
 </p>
 
-
 ### Built With
 
 * [React](https://reactjs.org/) - The JavaScript framework
@@ -20,9 +19,14 @@ Full-stack DRRM (Django, React, Redux, MySQL) application to handle accounting a
 * [Sass](https://sass-lang.com/) - CSS Pre-Processor
 * [Tailwind](https://tailwindcss.com/) - CSS framework
 
+### Requirements
+* [NPM](https://www.npmjs.com/) - Node Package Manager
+* [Python3](https://reactjs.org/) - Programming Language
 
 
 ### Installing
+
+#### Frontend
 
 1. Clone the repo
 
@@ -30,7 +34,7 @@ Full-stack DRRM (Django, React, Redux, MySQL) application to handle accounting a
 git clone https://github.com/arwildo/akunter
 ```
 
-2. Run npm install inside project root
+2. Run npm install inside `frontend` directory
 
 ```
 npm install
@@ -40,6 +44,22 @@ npm install
 
 ```
 npm run start
+```
+
+#### Backend
+
+5. Navigate to `backend` directory
+
+6. Install the requirement packages
+
+```
+pip install -r requirements.txt
+```
+
+7. Start the server
+
+```
+python manage.py runserver
 ```
 
 
