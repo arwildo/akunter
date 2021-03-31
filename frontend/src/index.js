@@ -5,6 +5,7 @@ import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import * as serviceWorker from './serviceWorker';
 import { transitions, positions, Provider as AlertProvider } from 'react-alert';
+import ReactGA from 'react-ga';
 
 import App from './App';
 import cartReducer from './reducers/cartReducer';
@@ -81,6 +82,9 @@ const options = {
   offset: '10px',
   transition: transitions.SCALE
 }
+
+// Google Analytics
+ReactGA.initialize('UA-51659765-2');
 
 // Redux
 const store = createStore(cartReducer);
