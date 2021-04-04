@@ -13,7 +13,7 @@ Full-stack DRRM (Django, React, Redux, MySQL) application to handle accounting a
 ### Built With
 
 * [React](https://reactjs.org/) - The JavaScript framework
-* [Reduc](https://redux.js.org/) - State Management
+* [Redux](https://redux.js.org/) - State Management
 * [Webpack](https://webpack.js.org/) - Module Bundler
 * [Babel](https://babeljs.io/) - Transcompiler
 * [Sass](https://sass-lang.com/) - CSS Pre-Processor
