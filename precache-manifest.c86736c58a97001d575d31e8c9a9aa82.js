@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "cf333bb98acc2b6df6433fb48fb49446",
+    "revision": "71341654ec3db74279f3000fbbe1e273",
     "url": "/akunter/index.html"
   },
   {
-    "revision": "9dab8578fcbf170affe6",
+    "revision": "1f7541bbcd7a73ee4552",
     "url": "/akunter/static/css/main.184edf90.chunk.css"
   },
   {
@@ -16,32 +16,32 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/akunter/static/js/2.b1642bf0.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "9dab8578fcbf170affe6",
-    "url": "/akunter/static/js/main.5da18ada.chunk.js"
+    "revision": "1f7541bbcd7a73ee4552",
+    "url": "/akunter/static/js/main.dd1b9648.chunk.js"
   },
   {
     "revision": "910710dd862e19fe4379",
     "url": "/akunter/static/js/runtime-main.75da1dbe.js"
   },
   {
-    "revision": "0116e277404acd62666c42abcab56806",
-    "url": "/akunter/static/media/beef-chicken-deluxe.0116e277.png"
+    "revision": "4edf27d703b428864781bf52b9195d74",
+    "url": "/akunter/static/media/beef-chicken-deluxe.4edf27d7.png"
   },
   {
-    "revision": "d1172819e97a511f7ccedad8c8eeda74",
-    "url": "/akunter/static/media/beef-chicken-original.d1172819.png"
+    "revision": "9c0a32d8ae37d5ee580820fd31fed182",
+    "url": "/akunter/static/media/beef-chicken-original.9c0a32d8.png"
   },
   {
-    "revision": "4a7b77b026cb04417ce2967f82be17f9",
-    "url": "/akunter/static/media/beef-madness.4a7b77b0.png"
+    "revision": "26dddc96504e98cad488547da13cae7a",
+    "url": "/akunter/static/media/beef-madness.26dddc96.png"
   },
   {
     "revision": "4f7d2f070dff78dc6498be479a1cc061",
     "url": "/akunter/static/media/cashier.4f7d2f07.jpg"
   },
   {
-    "revision": "fadcddc5a6b3cf38975d5edb63ab2c81",
-    "url": "/akunter/static/media/chicken-crispy.fadcddc5.png"
+    "revision": "47696d90d10de48468fa44171d42bc87",
+    "url": "/akunter/static/media/chicken-crispy.47696d90.png"
   },
   {
     "revision": "eda963be0938116d1dd23c5ffd1943c9",
