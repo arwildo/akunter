@@ -85,6 +85,7 @@ const options = {
 
 // Google Analytics
 ReactGA.initialize('UA-51659765-2');
+ReactGA.pageview(window.location.pathname + window.location.search);
 
 // Redux
 const store = createStore(cartReducer);
