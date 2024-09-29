@@ -21,7 +21,7 @@ Full-stack DRRM (Django, React, Redux, MySQL) application to handle accounting a
 
 ### Requirements
 * [NPM](https://www.npmjs.com/) - Node Package Manager
-* [Python3](https://reactjs.org/) - Programming Language
+* [Python3](https://www.python.org/) - Programming Language
 
 
 ### Installing
