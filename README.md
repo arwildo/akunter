@@ -1,3 +1,5 @@
+
+
 <p align=center><a href="https://arwildo.com/akunter/"><img src="https://raw.githubusercontent.com/arwildo/akunter/master/frontend/src/images/akunter-logo.png" width="32"></img></a></p> 
 <p align=center> 
   <img src="https://raw.githubusercontent.com/arwildo/akunter/master/frontend/src/images/akunter.png" width="800">
@@ -48,15 +50,15 @@ npm run start
 
 #### Backend
 
-5. Navigate to `backend` directory
+4. Navigate to `backend` directory
 
-6. Install the requirement packages
+5. Install the requirement packages
 
 ```
 pip install -r requirements.txt
 ```
 
-7. Start the server
+6. Start the server
 
 ```
 python manage.py runserver
